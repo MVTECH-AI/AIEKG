@@ -209,7 +209,7 @@ void ReadData::Open()
 		QMessageBox::information(NULL,"Memory Error","Retry or not",QMessageBox::Yes|QMessageBox::No,QMessageBox::Yes);
 		return;
 	}
-
+	//display 12 EKG leads
 	QCustomPlot *Plot = new QCustomPlot;
 	for(int i =0; i < 12; i++)
 	{
@@ -232,7 +232,6 @@ void ReadData::Open()
 	Plot->yAxis->setRange(-1000,1000);
 	Plot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom);
 	Plot->show();
-	//Plot->savePng("wsf123.png",1000,1000);
 
 }
 
