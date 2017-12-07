@@ -211,11 +211,24 @@ void ReadData::Open()
 	}
 
 	QCustomPlot *Plot = new QCustomPlot;
-	Plot->addGraph();
-	Plot->graph(0)->setData(xData,yData);
+	for(int i =0; i < 12; i++)
+	{
+		Plot->addGraph();
+		Plot->graph()->setPen(QPen(Qt::black));
+		Plot->graph()->setLineStyle(QCPGraph::lsLine); 
+		QVector<double> X(5000);
+		QVector<double> Y(5000);
+		for (int j = 0;j<5000;j++)
+		{
+			X[j] = xData[j+5000*i]-10*i;
+			Y[j] = yData[j+5000*i]-1500*i;
+		}
+		Plot->graph()->addData(X,Y);
+
+	}
 	Plot->xAxis->setLabel("X");
 	Plot->yAxis->setLabel("Y");
-	Plot->xAxis->setRange(0,100);
+	Plot->xAxis->setRange(0,10);
 	Plot->yAxis->setRange(-1000,1000);
 	Plot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom);
 	Plot->show();

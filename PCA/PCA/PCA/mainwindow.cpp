@@ -22,7 +22,7 @@ MainWindow::MainWindow(QWidget *parent, Qt::WFlags flags)
 	pImageProcess->doPCA(pReadData);
 	pImageProcess->trainSVMs(pReadData);
 	pImageProcess->testSVMs(pReadData);
-	connect(beginAction,SIGNAL(triggered()),this,SLOT(BeginSVM()));
+	connect(beginAction,SIGNAL(triggered()),this,SLOT(BeginSVM()))                                                                                                                                                  ;
 
 	
 
