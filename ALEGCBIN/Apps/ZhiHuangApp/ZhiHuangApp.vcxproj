@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{EAA99B52-8C7E-4EDA-A61C-7CBFD08B29AF}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ZhiHuangApp</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\MITK\ALEGCBIN\bin\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ZhiHuangApp.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ZhiHuangApp</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\MITK\ALEGCBIN\bin\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZhiHuangApp.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZhiHuangApp</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\MITK\ALEGCBIN\bin\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">ZhiHuangApp.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">ZhiHuangApp</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\MITK\ALEGCBIN\bin\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">ZhiHuangApp.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">ZhiHuangApp</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\application;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\event;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\service;C:\MITK\bin\MITK-build\BlueBerry\Bundles\org.blueberry.osgi;C:\MITK\bin\CTK-build\CTK-build;C:\MITK\bin\CTK-src\Libs\PluginFramework;C:\MITK\bin\CTK-build\CTK-build\Libs\PluginFramework;C:\MITK\bin\CTK-src\Libs\Core;C:\MITK\bin\CTK-build\CTK-build\Libs\Core;C:\MITK\bin\Poco-install\include;C:\MITK\src\Utilities\mbilog;C:\MITK\bin\MITK-build\Utilities\mbilog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4231</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WIN32_WINNT=0x0501;POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN;_DEBUG;POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN;QWT_DLL;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WIN32_WINNT=0x0501;POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN;_DEBUG;POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN;QWT_DLL;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\application;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\event;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\service;C:\MITK\bin\MITK-build\BlueBerry\Bundles\org.blueberry.osgi;C:\MITK\bin\CTK-build\CTK-build;C:\MITK\bin\CTK-src\Libs\PluginFramework;C:\MITK\bin\CTK-build\CTK-build\Libs\PluginFramework;C:\MITK\bin\CTK-src\Libs\Core;C:\MITK\bin\CTK-build\CTK-build\Libs\Core;C:\MITK\bin\Poco-install\include;C:\MITK\src\Utilities\mbilog;C:\MITK\bin\MITK-build\Utilities\mbilog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\application;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\event;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\service;C:\MITK\bin\MITK-build\BlueBerry\Bundles\org.blueberry.osgi;C:\MITK\bin\CTK-build\CTK-build;C:\MITK\bin\CTK-src\Libs\PluginFramework;C:\MITK\bin\CTK-build\CTK-build\Libs\PluginFramework;C:\MITK\bin\CTK-src\Libs\Core;C:\MITK\bin\CTK-build\CTK-build\Libs\Core;C:\MITK\bin\Poco-install\include;C:\MITK\src\Utilities\mbilog;C:\MITK\bin\MITK-build\Utilities\mbilog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\MITK\bin\MITK-build\bin\plugins\Debug\org_blueberry_osgi.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtCored4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\qtmaind.lib;C:\MITK\bin\CTK-build\CTK-build\bin\Debug\CTKPluginFramework.lib;C:\MITK\bin\CTK-build\CTK-build\bin\Debug\CTKCore.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtOpenGLd4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtXmlPatternsd4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtGuid4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtXmld4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtSqld4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtNetworkd4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtCored4.lib;dbghelp.lib;mbilog.lib;C:\MITK\bin\Poco-install\lib\PocoFoundationd.lib;C:\MITK\bin\Poco-install\lib\PocoUtild.lib;C:\MITK\bin\Poco-install\lib\PocoXMLd.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/MITK/bin/MITK-build/bin;C:/MITK/bin/MITK-build/bin/$(Configuration);C:/MITK/bin/OpenCV-build/lib/Debug;C:/MITK/bin/OpenCV-build/lib/Debug/$(Configuration);C:/MITK/bin/OpenCV-build/3rdparty/lib/Debug;C:/MITK/bin/OpenCV-build/3rdparty/lib/Debug/$(Configuration);C:/MITK/bin/VTK-build/bin;C:/MITK/bin/VTK-build/bin/$(Configuration);C:/MITK/bin/GDCM-build/bin/$(Configuration);C:/MITK/bin/GDCM-build/bin/$(Configuration)/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/MITK/ALEGCBIN/bin/Debug/ZhiHuangApp.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/MITK/ALEGCBIN/bin/Debug/ZhiHuangApp.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\application;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\event;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\service;C:\MITK\bin\MITK-build\BlueBerry\Bundles\org.blueberry.osgi;C:\MITK\bin\CTK-build\CTK-build;C:\MITK\bin\CTK-src\Libs\PluginFramework;C:\MITK\bin\CTK-build\CTK-build\Libs\PluginFramework;C:\MITK\bin\CTK-src\Libs\Core;C:\MITK\bin\CTK-build\CTK-build\Libs\Core;C:\MITK\bin\Poco-install\include;C:\MITK\src\Utilities\mbilog;C:\MITK\bin\MITK-build\Utilities\mbilog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4231</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WIN32_WINNT=0x0501;POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN;NDEBUG;POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN;QWT_DLL;QT_DLL;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WIN32_WINNT=0x0501;POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN;NDEBUG;POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN;QWT_DLL;QT_DLL;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\application;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\event;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\service;C:\MITK\bin\MITK-build\BlueBerry\Bundles\org.blueberry.osgi;C:\MITK\bin\CTK-build\CTK-build;C:\MITK\bin\CTK-src\Libs\PluginFramework;C:\MITK\bin\CTK-build\CTK-build\Libs\PluginFramework;C:\MITK\bin\CTK-src\Libs\Core;C:\MITK\bin\CTK-build\CTK-build\Libs\Core;C:\MITK\bin\Poco-install\include;C:\MITK\src\Utilities\mbilog;C:\MITK\bin\MITK-build\Utilities\mbilog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\application;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\event;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\service;C:\MITK\bin\MITK-build\BlueBerry\Bundles\org.blueberry.osgi;C:\MITK\bin\CTK-build\CTK-build;C:\MITK\bin\CTK-src\Libs\PluginFramework;C:\MITK\bin\CTK-build\CTK-build\Libs\PluginFramework;C:\MITK\bin\CTK-src\Libs\Core;C:\MITK\bin\CTK-build\CTK-build\Libs\Core;C:\MITK\bin\Poco-install\include;C:\MITK\src\Utilities\mbilog;C:\MITK\bin\MITK-build\Utilities\mbilog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\MITK\bin\MITK-build\bin\plugins\Release\org_blueberry_osgi.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtCore4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\qtmain.lib;C:\MITK\bin\CTK-build\CTK-build\bin\Release\CTKPluginFramework.lib;C:\MITK\bin\CTK-build\CTK-build\bin\Release\CTKCore.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtOpenGL4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtXmlPatterns4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtGui4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtXml4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtSql4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtNetwork4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtCore4.lib;dbghelp.lib;mbilog.lib;C:\MITK\bin\Poco-install\lib\PocoFoundation.lib;C:\MITK\bin\Poco-install\lib\PocoUtil.lib;C:\MITK\bin\Poco-install\lib\PocoXML.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/MITK/bin/MITK-build/bin;C:/MITK/bin/MITK-build/bin/$(Configuration);C:/MITK/bin/OpenCV-build/lib/Debug;C:/MITK/bin/OpenCV-build/lib/Debug/$(Configuration);C:/MITK/bin/OpenCV-build/3rdparty/lib/Debug;C:/MITK/bin/OpenCV-build/3rdparty/lib/Debug/$(Configuration);C:/MITK/bin/VTK-build/bin;C:/MITK/bin/VTK-build/bin/$(Configuration);C:/MITK/bin/GDCM-build/bin/$(Configuration);C:/MITK/bin/GDCM-build/bin/$(Configuration)/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/MITK/ALEGCBIN/bin/Release/ZhiHuangApp.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/MITK/ALEGCBIN/bin/Release/ZhiHuangApp.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\application;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\event;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\service;C:\MITK\bin\MITK-build\BlueBerry\Bundles\org.blueberry.osgi;C:\MITK\bin\CTK-build\CTK-build;C:\MITK\bin\CTK-src\Libs\PluginFramework;C:\MITK\bin\CTK-build\CTK-build\Libs\PluginFramework;C:\MITK\bin\CTK-src\Libs\Core;C:\MITK\bin\CTK-build\CTK-build\Libs\Core;C:\MITK\bin\Poco-install\include;C:\MITK\src\Utilities\mbilog;C:\MITK\bin\MITK-build\Utilities\mbilog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4231</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WIN32_WINNT=0x0501;POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN;NDEBUG;POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN;QWT_DLL;QT_DLL;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WIN32_WINNT=0x0501;POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN;NDEBUG;POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN;QWT_DLL;QT_DLL;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\application;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\event;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\service;C:\MITK\bin\MITK-build\BlueBerry\Bundles\org.blueberry.osgi;C:\MITK\bin\CTK-build\CTK-build;C:\MITK\bin\CTK-src\Libs\PluginFramework;C:\MITK\bin\CTK-build\CTK-build\Libs\PluginFramework;C:\MITK\bin\CTK-src\Libs\Core;C:\MITK\bin\CTK-build\CTK-build\Libs\Core;C:\MITK\bin\Poco-install\include;C:\MITK\src\Utilities\mbilog;C:\MITK\bin\MITK-build\Utilities\mbilog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\application;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\event;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\service;C:\MITK\bin\MITK-build\BlueBerry\Bundles\org.blueberry.osgi;C:\MITK\bin\CTK-build\CTK-build;C:\MITK\bin\CTK-src\Libs\PluginFramework;C:\MITK\bin\CTK-build\CTK-build\Libs\PluginFramework;C:\MITK\bin\CTK-src\Libs\Core;C:\MITK\bin\CTK-build\CTK-build\Libs\Core;C:\MITK\bin\Poco-install\include;C:\MITK\src\Utilities\mbilog;C:\MITK\bin\MITK-build\Utilities\mbilog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\MITK\bin\MITK-build\bin\plugins\MinSizeRel\org_blueberry_osgi.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtCore4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\qtmain.lib;C:\MITK\bin\CTK-build\CTK-build\bin\MinSizeRel\CTKPluginFramework.lib;C:\MITK\bin\CTK-build\CTK-build\bin\MinSizeRel\CTKCore.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtOpenGL4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtXmlPatterns4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtGui4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtXml4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtSql4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtNetwork4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtCore4.lib;dbghelp.lib;mbilog.lib;C:\MITK\bin\Poco-install\lib\PocoFoundation.lib;C:\MITK\bin\Poco-install\lib\PocoUtil.lib;C:\MITK\bin\Poco-install\lib\PocoXML.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/MITK/bin/MITK-build/bin;C:/MITK/bin/MITK-build/bin/$(Configuration);C:/MITK/bin/OpenCV-build/lib/Debug;C:/MITK/bin/OpenCV-build/lib/Debug/$(Configuration);C:/MITK/bin/OpenCV-build/3rdparty/lib/Debug;C:/MITK/bin/OpenCV-build/3rdparty/lib/Debug/$(Configuration);C:/MITK/bin/VTK-build/bin;C:/MITK/bin/VTK-build/bin/$(Configuration);C:/MITK/bin/GDCM-build/bin/$(Configuration);C:/MITK/bin/GDCM-build/bin/$(Configuration)/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/MITK/ALEGCBIN/bin/MinSizeRel/ZhiHuangApp.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/MITK/ALEGCBIN/bin/MinSizeRel/ZhiHuangApp.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\application;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\event;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\service;C:\MITK\bin\MITK-build\BlueBerry\Bundles\org.blueberry.osgi;C:\MITK\bin\CTK-build\CTK-build;C:\MITK\bin\CTK-src\Libs\PluginFramework;C:\MITK\bin\CTK-build\CTK-build\Libs\PluginFramework;C:\MITK\bin\CTK-src\Libs\Core;C:\MITK\bin\CTK-build\CTK-build\Libs\Core;C:\MITK\bin\Poco-install\include;C:\MITK\src\Utilities\mbilog;C:\MITK\bin\MITK-build\Utilities\mbilog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4231</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WIN32_WINNT=0x0501;POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN;NDEBUG;POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN;QWT_DLL;QT_DLL;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WIN32_WINNT=0x0501;POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN;NDEBUG;POCO_NO_UNWINDOWS;WIN32_LEAN_AND_MEAN;QWT_DLL;QT_DLL;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\application;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\event;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\service;C:\MITK\bin\MITK-build\BlueBerry\Bundles\org.blueberry.osgi;C:\MITK\bin\CTK-build\CTK-build;C:\MITK\bin\CTK-src\Libs\PluginFramework;C:\MITK\bin\CTK-build\CTK-build\Libs\PluginFramework;C:\MITK\bin\CTK-src\Libs\Core;C:\MITK\bin\CTK-build\CTK-build\Libs\Core;C:\MITK\bin\Poco-install\include;C:\MITK\src\Utilities\mbilog;C:\MITK\bin\MITK-build\Utilities\mbilog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\application;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\event;C:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\service;C:\MITK\bin\MITK-build\BlueBerry\Bundles\org.blueberry.osgi;C:\MITK\bin\CTK-build\CTK-build;C:\MITK\bin\CTK-src\Libs\PluginFramework;C:\MITK\bin\CTK-build\CTK-build\Libs\PluginFramework;C:\MITK\bin\CTK-src\Libs\Core;C:\MITK\bin\CTK-build\CTK-build\Libs\Core;C:\MITK\bin\Poco-install\include;C:\MITK\src\Utilities\mbilog;C:\MITK\bin\MITK-build\Utilities\mbilog;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\MITK\bin\MITK-build\bin\plugins\RelWithDebInfo\org_blueberry_osgi.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtCore4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\qtmain.lib;C:\MITK\bin\CTK-build\CTK-build\bin\RelWithDebInfo\CTKPluginFramework.lib;C:\MITK\bin\CTK-build\CTK-build\bin\RelWithDebInfo\CTKCore.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtOpenGL4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtXmlPatterns4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtGui4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtXml4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtSql4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtNetwork4.lib;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtCore4.lib;dbghelp.lib;mbilog.lib;C:\MITK\bin\Poco-install\lib\PocoFoundation.lib;C:\MITK\bin\Poco-install\lib\PocoUtil.lib;C:\MITK\bin\Poco-install\lib\PocoXML.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/MITK/bin/MITK-build/bin;C:/MITK/bin/MITK-build/bin/$(Configuration);C:/MITK/bin/OpenCV-build/lib/Debug;C:/MITK/bin/OpenCV-build/lib/Debug/$(Configuration);C:/MITK/bin/OpenCV-build/3rdparty/lib/Debug;C:/MITK/bin/OpenCV-build/3rdparty/lib/Debug/$(Configuration);C:/MITK/bin/VTK-build/bin;C:/MITK/bin/VTK-build/bin/$(Configuration);C:/MITK/bin/GDCM-build/bin/$(Configuration);C:/MITK/bin/GDCM-build/bin/$(Configuration)/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/MITK/ALEGCBIN/bin/RelWithDebInfo/ZhiHuangApp.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/MITK/ALEGCBIN/bin/RelWithDebInfo/ZhiHuangApp.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\ALEGC\Apps\ZhiHuangApp\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/MITK/ALEGC/Apps/ZhiHuangApp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HE:/MITK/ALEGC -BE:/MITK/ALEGCBIN --check-stamp-file E:\MITK\ALEGCBIN\Apps\ZhiHuangApp\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/MITK/ALEGC/Apps/ZhiHuangApp/CMakeLists.txt;E:\MITK\ALEGC\Apps\ZhiHuangApp\CMakeLists.txt;C:\MITK\bin\MITK-build\MITKConfig.cmake;C:\MITK\src\CMake\MacroParseArguments.cmake;C:\MITK\src\CMake\mitkFunctionCheckMitkCompatibility.cmake;C:\MITK\src\CMake\mitkFunctionOrganizeSources.cmake;C:\MITK\src\CMake\mitkFunctionCreateWindowsBatchScript.cmake;C:\MITK\src\CMake\mitkFunctionInstallProvisioningFiles.cmake;C:\MITK\src\CMake\mitkFunctionInstallAutoLoadModules.cmake;C:\MITK\src\CMake\mitkFunctionGetLibrarySearchPaths.cmake;C:\MITK\src\CMake\mitkMacroCreateModuleConf.cmake;C:\MITK\src\CMake\mitkMacroCreateModule.cmake;C:\MITK\src\CMake\mitkMacroCheckModule.cmake;C:\MITK\src\CMake\mitkMacroCreateModuleTests.cmake;C:\MITK\src\CMake\mitkFunctionAddCustomModuleTest.cmake;C:\MITK\src\CMake\mitkMacroUseModule.cmake;C:\MITK\src\CMake\mitkMacroMultiplexPicType.cmake;C:\MITK\src\CMake\mitkMacroInstall.cmake;C:\MITK\src\CMake\mitkMacroInstallHelperApp.cmake;C:\MITK\src\CMake\mitkMacroInstallTargets.cmake;C:\MITK\src\CMake\mitkMacroGenerateToolsLibrary.cmake;C:\MITK\src\CMake\mitkMacroCreateCTKPlugin.cmake;C:\MITK\src\CMake\mitkMacroGetPMDPlatformString.cmake;C:\MITK\bin\MITK-build\mitkToFHardwareInstallRules.cmake;C:\MITK\bin\MITK-build\BlueBerry\BlueBerryConfig.cmake;C:\MITK\bin\CTK-src\Utilities\CMake\FindCTK.cmake;C:\MITK\bin\CTK-build\CTKConfigVersion.cmake;C:\MITK\bin\CTK-build\CTKConfig.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetGccVersion.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionCheckCompilerFlags.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\TestCXXAcceptsFlag.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetCompilerVisibilityFlags.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroParseArguments.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroSetPaths.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroListFilter.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroBuildLibWrapper.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroBuildPlugin.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroBuildQtPlugin.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroTargetLibraries.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionExtractOptionNameAndValue.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroValidateBuildOptions.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGenerateDGraphInput.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGeneratePluginManifest.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGeneratePluginUseFile.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroGeneratePluginResourceFile.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetIncludeDirs.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetLibraryDirs.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionExtractPluginTargets.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetAllPluginTargets.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetTargetDependencies.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetPluginDependencies.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroSetupPlugins.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroGenerateMocs.cmake;C:\MITK\bin\CTK-build\CTKPluginUseFile.cmake;C:\MITK\bin\MITK-build\Utilities\mbilog\mbilogConfig.cmake;C:\MITK\src\BlueBerry\CMake\FindPoco.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindDoxygen.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\MITK\src\CMake\MacroParseArguments.cmake;C:\MITK\src\BlueBerry\CMake\MacroConvertSchema.cmake;C:\MITK\src\BlueBerry\CMake\MacroOrganizeSources.cmake;C:\MITK\src\BlueBerry\CMake\MacroCreateCTKPlugin.cmake;C:\MITK\src\BlueBerry\CMake\MacroCreateQtHelp.cmake;C:\MITK\src\BlueBerry\CMake\MacroInstallCTKPlugin.cmake;C:\MITK\src\BlueBerry\CMake\FunctionInstallThirdPartyCTKPlugins.cmake;C:\MITK\src\BlueBerry\CMake\FunctionCreateProvisioningFile.cmake;C:\MITK\src\BlueBerry\CMake\FunctionCreateBlueBerryApplication.cmake;C:\MITK\bin\MITK-build\MitkPluginUseFile.cmake;C:\MITK\src\BlueBerry\CMake\FindPoco.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\UseQt4.cmake;E:\MITK\ALEGC\Apps\ZhiHuangApp\ZhiHuangApp.ini;E:\MITK\ALEGC\Apps\ZhiHuangApp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\MITK\ALEGCBIN\Apps\ZhiHuangApp\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/MITK/ALEGC/Apps/ZhiHuangApp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HE:/MITK/ALEGC -BE:/MITK/ALEGCBIN --check-stamp-file E:\MITK\ALEGCBIN\Apps\ZhiHuangApp\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/MITK/ALEGC/Apps/ZhiHuangApp/CMakeLists.txt;E:\MITK\ALEGC\Apps\ZhiHuangApp\CMakeLists.txt;C:\MITK\bin\MITK-build\MITKConfig.cmake;C:\MITK\src\CMake\MacroParseArguments.cmake;C:\MITK\src\CMake\mitkFunctionCheckMitkCompatibility.cmake;C:\MITK\src\CMake\mitkFunctionOrganizeSources.cmake;C:\MITK\src\CMake\mitkFunctionCreateWindowsBatchScript.cmake;C:\MITK\src\CMake\mitkFunctionInstallProvisioningFiles.cmake;C:\MITK\src\CMake\mitkFunctionInstallAutoLoadModules.cmake;C:\MITK\src\CMake\mitkFunctionGetLibrarySearchPaths.cmake;C:\MITK\src\CMake\mitkMacroCreateModuleConf.cmake;C:\MITK\src\CMake\mitkMacroCreateModule.cmake;C:\MITK\src\CMake\mitkMacroCheckModule.cmake;C:\MITK\src\CMake\mitkMacroCreateModuleTests.cmake;C:\MITK\src\CMake\mitkFunctionAddCustomModuleTest.cmake;C:\MITK\src\CMake\mitkMacroUseModule.cmake;C:\MITK\src\CMake\mitkMacroMultiplexPicType.cmake;C:\MITK\src\CMake\mitkMacroInstall.cmake;C:\MITK\src\CMake\mitkMacroInstallHelperApp.cmake;C:\MITK\src\CMake\mitkMacroInstallTargets.cmake;C:\MITK\src\CMake\mitkMacroGenerateToolsLibrary.cmake;C:\MITK\src\CMake\mitkMacroCreateCTKPlugin.cmake;C:\MITK\src\CMake\mitkMacroGetPMDPlatformString.cmake;C:\MITK\bin\MITK-build\mitkToFHardwareInstallRules.cmake;C:\MITK\bin\MITK-build\BlueBerry\BlueBerryConfig.cmake;C:\MITK\bin\CTK-src\Utilities\CMake\FindCTK.cmake;C:\MITK\bin\CTK-build\CTKConfigVersion.cmake;C:\MITK\bin\CTK-build\CTKConfig.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetGccVersion.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionCheckCompilerFlags.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\TestCXXAcceptsFlag.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetCompilerVisibilityFlags.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroParseArguments.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroSetPaths.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroListFilter.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroBuildLibWrapper.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroBuildPlugin.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroBuildQtPlugin.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroTargetLibraries.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionExtractOptionNameAndValue.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroValidateBuildOptions.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGenerateDGraphInput.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGeneratePluginManifest.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGeneratePluginUseFile.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroGeneratePluginResourceFile.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetIncludeDirs.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetLibraryDirs.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionExtractPluginTargets.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetAllPluginTargets.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetTargetDependencies.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetPluginDependencies.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroSetupPlugins.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroGenerateMocs.cmake;C:\MITK\bin\CTK-build\CTKPluginUseFile.cmake;C:\MITK\bin\MITK-build\Utilities\mbilog\mbilogConfig.cmake;C:\MITK\src\BlueBerry\CMake\FindPoco.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindDoxygen.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\MITK\src\CMake\MacroParseArguments.cmake;C:\MITK\src\BlueBerry\CMake\MacroConvertSchema.cmake;C:\MITK\src\BlueBerry\CMake\MacroOrganizeSources.cmake;C:\MITK\src\BlueBerry\CMake\MacroCreateCTKPlugin.cmake;C:\MITK\src\BlueBerry\CMake\MacroCreateQtHelp.cmake;C:\MITK\src\BlueBerry\CMake\MacroInstallCTKPlugin.cmake;C:\MITK\src\BlueBerry\CMake\FunctionInstallThirdPartyCTKPlugins.cmake;C:\MITK\src\BlueBerry\CMake\FunctionCreateProvisioningFile.cmake;C:\MITK\src\BlueBerry\CMake\FunctionCreateBlueBerryApplication.cmake;C:\MITK\bin\MITK-build\MitkPluginUseFile.cmake;C:\MITK\src\BlueBerry\CMake\FindPoco.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\UseQt4.cmake;E:\MITK\ALEGC\Apps\ZhiHuangApp\ZhiHuangApp.ini;E:\MITK\ALEGC\Apps\ZhiHuangApp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\MITK\ALEGCBIN\Apps\ZhiHuangApp\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/MITK/ALEGC/Apps/ZhiHuangApp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HE:/MITK/ALEGC -BE:/MITK/ALEGCBIN --check-stamp-file E:\MITK\ALEGCBIN\Apps\ZhiHuangApp\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/MITK/ALEGC/Apps/ZhiHuangApp/CMakeLists.txt;E:\MITK\ALEGC\Apps\ZhiHuangApp\CMakeLists.txt;C:\MITK\bin\MITK-build\MITKConfig.cmake;C:\MITK\src\CMake\MacroParseArguments.cmake;C:\MITK\src\CMake\mitkFunctionCheckMitkCompatibility.cmake;C:\MITK\src\CMake\mitkFunctionOrganizeSources.cmake;C:\MITK\src\CMake\mitkFunctionCreateWindowsBatchScript.cmake;C:\MITK\src\CMake\mitkFunctionInstallProvisioningFiles.cmake;C:\MITK\src\CMake\mitkFunctionInstallAutoLoadModules.cmake;C:\MITK\src\CMake\mitkFunctionGetLibrarySearchPaths.cmake;C:\MITK\src\CMake\mitkMacroCreateModuleConf.cmake;C:\MITK\src\CMake\mitkMacroCreateModule.cmake;C:\MITK\src\CMake\mitkMacroCheckModule.cmake;C:\MITK\src\CMake\mitkMacroCreateModuleTests.cmake;C:\MITK\src\CMake\mitkFunctionAddCustomModuleTest.cmake;C:\MITK\src\CMake\mitkMacroUseModule.cmake;C:\MITK\src\CMake\mitkMacroMultiplexPicType.cmake;C:\MITK\src\CMake\mitkMacroInstall.cmake;C:\MITK\src\CMake\mitkMacroInstallHelperApp.cmake;C:\MITK\src\CMake\mitkMacroInstallTargets.cmake;C:\MITK\src\CMake\mitkMacroGenerateToolsLibrary.cmake;C:\MITK\src\CMake\mitkMacroCreateCTKPlugin.cmake;C:\MITK\src\CMake\mitkMacroGetPMDPlatformString.cmake;C:\MITK\bin\MITK-build\mitkToFHardwareInstallRules.cmake;C:\MITK\bin\MITK-build\BlueBerry\BlueBerryConfig.cmake;C:\MITK\bin\CTK-src\Utilities\CMake\FindCTK.cmake;C:\MITK\bin\CTK-build\CTKConfigVersion.cmake;C:\MITK\bin\CTK-build\CTKConfig.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetGccVersion.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionCheckCompilerFlags.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\TestCXXAcceptsFlag.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetCompilerVisibilityFlags.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroParseArguments.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroSetPaths.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroListFilter.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroBuildLibWrapper.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroBuildPlugin.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroBuildQtPlugin.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroTargetLibraries.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionExtractOptionNameAndValue.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroValidateBuildOptions.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGenerateDGraphInput.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGeneratePluginManifest.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGeneratePluginUseFile.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroGeneratePluginResourceFile.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetIncludeDirs.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetLibraryDirs.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionExtractPluginTargets.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetAllPluginTargets.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetTargetDependencies.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetPluginDependencies.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroSetupPlugins.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroGenerateMocs.cmake;C:\MITK\bin\CTK-build\CTKPluginUseFile.cmake;C:\MITK\bin\MITK-build\Utilities\mbilog\mbilogConfig.cmake;C:\MITK\src\BlueBerry\CMake\FindPoco.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindDoxygen.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\MITK\src\CMake\MacroParseArguments.cmake;C:\MITK\src\BlueBerry\CMake\MacroConvertSchema.cmake;C:\MITK\src\BlueBerry\CMake\MacroOrganizeSources.cmake;C:\MITK\src\BlueBerry\CMake\MacroCreateCTKPlugin.cmake;C:\MITK\src\BlueBerry\CMake\MacroCreateQtHelp.cmake;C:\MITK\src\BlueBerry\CMake\MacroInstallCTKPlugin.cmake;C:\MITK\src\BlueBerry\CMake\FunctionInstallThirdPartyCTKPlugins.cmake;C:\MITK\src\BlueBerry\CMake\FunctionCreateProvisioningFile.cmake;C:\MITK\src\BlueBerry\CMake\FunctionCreateBlueBerryApplication.cmake;C:\MITK\bin\MITK-build\MitkPluginUseFile.cmake;C:\MITK\src\BlueBerry\CMake\FindPoco.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\UseQt4.cmake;E:\MITK\ALEGC\Apps\ZhiHuangApp\ZhiHuangApp.ini;E:\MITK\ALEGC\Apps\ZhiHuangApp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\MITK\ALEGCBIN\Apps\ZhiHuangApp\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/MITK/ALEGC/Apps/ZhiHuangApp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HE:/MITK/ALEGC -BE:/MITK/ALEGCBIN --check-stamp-file E:\MITK\ALEGCBIN\Apps\ZhiHuangApp\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/MITK/ALEGC/Apps/ZhiHuangApp/CMakeLists.txt;E:\MITK\ALEGC\Apps\ZhiHuangApp\CMakeLists.txt;C:\MITK\bin\MITK-build\MITKConfig.cmake;C:\MITK\src\CMake\MacroParseArguments.cmake;C:\MITK\src\CMake\mitkFunctionCheckMitkCompatibility.cmake;C:\MITK\src\CMake\mitkFunctionOrganizeSources.cmake;C:\MITK\src\CMake\mitkFunctionCreateWindowsBatchScript.cmake;C:\MITK\src\CMake\mitkFunctionInstallProvisioningFiles.cmake;C:\MITK\src\CMake\mitkFunctionInstallAutoLoadModules.cmake;C:\MITK\src\CMake\mitkFunctionGetLibrarySearchPaths.cmake;C:\MITK\src\CMake\mitkMacroCreateModuleConf.cmake;C:\MITK\src\CMake\mitkMacroCreateModule.cmake;C:\MITK\src\CMake\mitkMacroCheckModule.cmake;C:\MITK\src\CMake\mitkMacroCreateModuleTests.cmake;C:\MITK\src\CMake\mitkFunctionAddCustomModuleTest.cmake;C:\MITK\src\CMake\mitkMacroUseModule.cmake;C:\MITK\src\CMake\mitkMacroMultiplexPicType.cmake;C:\MITK\src\CMake\mitkMacroInstall.cmake;C:\MITK\src\CMake\mitkMacroInstallHelperApp.cmake;C:\MITK\src\CMake\mitkMacroInstallTargets.cmake;C:\MITK\src\CMake\mitkMacroGenerateToolsLibrary.cmake;C:\MITK\src\CMake\mitkMacroCreateCTKPlugin.cmake;C:\MITK\src\CMake\mitkMacroGetPMDPlatformString.cmake;C:\MITK\bin\MITK-build\mitkToFHardwareInstallRules.cmake;C:\MITK\bin\MITK-build\BlueBerry\BlueBerryConfig.cmake;C:\MITK\bin\CTK-src\Utilities\CMake\FindCTK.cmake;C:\MITK\bin\CTK-build\CTKConfigVersion.cmake;C:\MITK\bin\CTK-build\CTKConfig.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetGccVersion.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionCheckCompilerFlags.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\TestCXXAcceptsFlag.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetCompilerVisibilityFlags.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroParseArguments.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroSetPaths.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroListFilter.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroBuildLibWrapper.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroBuildPlugin.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroBuildQtPlugin.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroTargetLibraries.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionExtractOptionNameAndValue.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroValidateBuildOptions.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGenerateDGraphInput.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGeneratePluginManifest.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGeneratePluginUseFile.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroGeneratePluginResourceFile.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetIncludeDirs.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetLibraryDirs.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionExtractPluginTargets.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetAllPluginTargets.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetTargetDependencies.cmake;C:\MITK\bin\CTK-src\CMake\ctkFunctionGetPluginDependencies.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroSetupPlugins.cmake;C:\MITK\bin\CTK-src\CMake\ctkMacroGenerateMocs.cmake;C:\MITK\bin\CTK-build\CTKPluginUseFile.cmake;C:\MITK\bin\MITK-build\Utilities\mbilog\mbilogConfig.cmake;C:\MITK\src\BlueBerry\CMake\FindPoco.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindDoxygen.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\MITK\src\CMake\MacroParseArguments.cmake;C:\MITK\src\BlueBerry\CMake\MacroConvertSchema.cmake;C:\MITK\src\BlueBerry\CMake\MacroOrganizeSources.cmake;C:\MITK\src\BlueBerry\CMake\MacroCreateCTKPlugin.cmake;C:\MITK\src\BlueBerry\CMake\MacroCreateQtHelp.cmake;C:\MITK\src\BlueBerry\CMake\MacroInstallCTKPlugin.cmake;C:\MITK\src\BlueBerry\CMake\FunctionInstallThirdPartyCTKPlugins.cmake;C:\MITK\src\BlueBerry\CMake\FunctionCreateProvisioningFile.cmake;C:\MITK\src\BlueBerry\CMake\FunctionCreateBlueBerryApplication.cmake;C:\MITK\bin\MITK-build\MitkPluginUseFile.cmake;C:\MITK\src\BlueBerry\CMake\FindPoco.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.3\Modules\UseQt4.cmake;E:\MITK\ALEGC\Apps\ZhiHuangApp\ZhiHuangApp.ini;E:\MITK\ALEGC\Apps\ZhiHuangApp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\MITK\ALEGCBIN\Apps\ZhiHuangApp\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\ALEGC\Apps\ZhiHuangApp\ZhiHuangApp.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:/MITK/ALEGCBIN/ZERO_CHECK.vcxproj">
+      <Project>5123AABA-47D1-49D8-9CD3-A14037B3E837</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/MITK/ALEGCBIN/Plugins/Zhi.Huang.MypluginName/Zhi_Huang_MypluginName.vcxproj">
+      <Project>BFE5DE24-5835-4934-BA63-8A2E307F1EBE</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

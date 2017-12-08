@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\ALEGC\Plugins\Zhi.Huang.MypluginName\src\internal\mitkPluginActivator.cpp">
+      <Filter>== Source Files ==</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ALEGC\Plugins\Zhi.Huang.MypluginName\src\internal\QmitkTemplateView.cpp">
+      <Filter>== Source Files ==</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ALEGC\Plugins\Zhi.Huang.MypluginName\src\internal\qcustomplot.cpp">
+      <Filter>== Source Files ==</Filter>
+    </ClCompile>
+    <ClCompile Include="src\internal\moc_mitkPluginActivator.cxx">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="src\internal\moc_QmitkTemplateView.cxx">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="src\internal\moc_qcustomplot.cxx">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="qrc_Zhi_Huang_MypluginName_manifest.cxx">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="qrc_Zhi_Huang_MypluginName_cached.cxx">
+      <Filter>Generated</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ui_QmitkTemplateViewControls.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\ALEGC\Plugins\Zhi.Huang.MypluginName\CMakeLists.txt" />
+    <CustomBuild Include="..\..\CMakeFiles\425c3044d768b3939d721e2a4f0561dc\moc_mitkPluginActivator.cxx.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\CMakeFiles\425c3044d768b3939d721e2a4f0561dc\moc_QmitkTemplateView.cxx.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\CMakeFiles\425c3044d768b3939d721e2a4f0561dc\moc_qcustomplot.cxx.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\ALEGC\Plugins\Zhi.Huang.MypluginName\src\internal\QmitkTemplateViewControls.ui">
+      <Filter>QT UI Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Zhi_Huang_MypluginName_manifest.qrc" />
+    <CustomBuild Include="Zhi_Huang_MypluginName_cached.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{82849EE2-388E-4BFA-A743-72B997E2426E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated">
+      <UniqueIdentifier>{15AC7753-C7FD-49AE-917E-D60E087AF6AA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="== Source Files ==">
+      <UniqueIdentifier>{2E380967-806B-408F-A1DC-CB046D6131E7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QT UI Files">
+      <UniqueIdentifier>{2FCCAF24-AA0D-4E4F-B8FC-25FAF50AE3C7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

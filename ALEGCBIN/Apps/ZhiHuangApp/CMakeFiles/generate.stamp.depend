@@ -1,0 +1,79 @@
+# CMake generation dependency list for this directory.
+E:/MITK/ALEGC/Apps/ZhiHuangApp/CMakeLists.txt
+C:/MITK/bin/MITK-build/MITKConfig.cmake
+C:/MITK/src/CMake/MacroParseArguments.cmake
+C:/MITK/src/CMake/mitkFunctionCheckMitkCompatibility.cmake
+C:/MITK/src/CMake/mitkFunctionOrganizeSources.cmake
+C:/MITK/src/CMake/mitkFunctionCreateWindowsBatchScript.cmake
+C:/MITK/src/CMake/mitkFunctionInstallProvisioningFiles.cmake
+C:/MITK/src/CMake/mitkFunctionInstallAutoLoadModules.cmake
+C:/MITK/src/CMake/mitkFunctionGetLibrarySearchPaths.cmake
+C:/MITK/src/CMake/mitkMacroCreateModuleConf.cmake
+C:/MITK/src/CMake/mitkMacroCreateModule.cmake
+C:/MITK/src/CMake/mitkMacroCheckModule.cmake
+C:/MITK/src/CMake/mitkMacroCreateModuleTests.cmake
+C:/MITK/src/CMake/mitkFunctionAddCustomModuleTest.cmake
+C:/MITK/src/CMake/mitkMacroUseModule.cmake
+C:/MITK/src/CMake/mitkMacroMultiplexPicType.cmake
+C:/MITK/src/CMake/mitkMacroInstall.cmake
+C:/MITK/src/CMake/mitkMacroInstallHelperApp.cmake
+C:/MITK/src/CMake/mitkMacroInstallTargets.cmake
+C:/MITK/src/CMake/mitkMacroGenerateToolsLibrary.cmake
+C:/MITK/src/CMake/mitkMacroCreateCTKPlugin.cmake
+C:/MITK/src/CMake/mitkMacroGetPMDPlatformString.cmake
+C:/MITK/bin/MITK-build/mitkToFHardwareInstallRules.cmake
+C:/MITK/bin/MITK-build/BlueBerry/BlueBerryConfig.cmake
+C:/MITK/bin/CTK-src/Utilities/CMake/FindCTK.cmake
+C:/MITK/bin/CTK-build/CTKConfigVersion.cmake
+C:/MITK/bin/CTK-build/CTKConfig.cmake
+C:/MITK/bin/CTK-src/CMake/ctkFunctionGetGccVersion.cmake
+C:/MITK/bin/CTK-src/CMake/ctkFunctionCheckCompilerFlags.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.3/Modules/TestCXXAcceptsFlag.cmake
+C:/MITK/bin/CTK-src/CMake/ctkFunctionGetCompilerVisibilityFlags.cmake
+C:/MITK/bin/CTK-src/CMake/ctkMacroParseArguments.cmake
+C:/MITK/bin/CTK-src/CMake/ctkMacroSetPaths.cmake
+C:/MITK/bin/CTK-src/CMake/ctkMacroListFilter.cmake
+C:/MITK/bin/CTK-src/CMake/ctkMacroBuildLibWrapper.cmake
+C:/MITK/bin/CTK-src/CMake/ctkMacroBuildPlugin.cmake
+C:/MITK/bin/CTK-src/CMake/ctkMacroBuildQtPlugin.cmake
+C:/MITK/bin/CTK-src/CMake/ctkMacroTargetLibraries.cmake
+C:/MITK/bin/CTK-src/CMake/ctkFunctionExtractOptionNameAndValue.cmake
+C:/MITK/bin/CTK-src/CMake/ctkMacroValidateBuildOptions.cmake
+C:/MITK/bin/CTK-src/CMake/ctkFunctionGenerateDGraphInput.cmake
+C:/MITK/bin/CTK-src/CMake/ctkFunctionGeneratePluginManifest.cmake
+C:/MITK/bin/CTK-src/CMake/ctkFunctionGeneratePluginUseFile.cmake
+C:/MITK/bin/CTK-src/CMake/ctkMacroGeneratePluginResourceFile.cmake
+C:/MITK/bin/CTK-src/CMake/ctkFunctionGetIncludeDirs.cmake
+C:/MITK/bin/CTK-src/CMake/ctkFunctionGetLibraryDirs.cmake
+C:/MITK/bin/CTK-src/CMake/ctkFunctionExtractPluginTargets.cmake
+C:/MITK/bin/CTK-src/CMake/ctkFunctionGetAllPluginTargets.cmake
+C:/MITK/bin/CTK-src/CMake/ctkFunctionGetTargetDependencies.cmake
+C:/MITK/bin/CTK-src/CMake/ctkFunctionGetPluginDependencies.cmake
+C:/MITK/bin/CTK-src/CMake/ctkMacroSetupPlugins.cmake
+C:/MITK/bin/CTK-src/CMake/ctkMacroGenerateMocs.cmake
+C:/MITK/bin/CTK-build/CTKPluginUseFile.cmake
+C:/MITK/bin/MITK-build/Utilities/mbilog/mbilogConfig.cmake
+C:/MITK/src/BlueBerry/CMake/FindPoco.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.3/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.3/Modules/FindPackageMessage.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CMakeParseArguments.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.3/Modules/FindDoxygen.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.3/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.3/Modules/FindPackageMessage.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CMakeParseArguments.cmake
+C:/MITK/src/CMake/MacroParseArguments.cmake
+C:/MITK/src/BlueBerry/CMake/MacroConvertSchema.cmake
+C:/MITK/src/BlueBerry/CMake/MacroOrganizeSources.cmake
+C:/MITK/src/BlueBerry/CMake/MacroCreateCTKPlugin.cmake
+C:/MITK/src/BlueBerry/CMake/MacroCreateQtHelp.cmake
+C:/MITK/src/BlueBerry/CMake/MacroInstallCTKPlugin.cmake
+C:/MITK/src/BlueBerry/CMake/FunctionInstallThirdPartyCTKPlugins.cmake
+C:/MITK/src/BlueBerry/CMake/FunctionCreateProvisioningFile.cmake
+C:/MITK/src/BlueBerry/CMake/FunctionCreateBlueBerryApplication.cmake
+C:/MITK/bin/MITK-build/MitkPluginUseFile.cmake
+C:/MITK/src/BlueBerry/CMake/FindPoco.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.3/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.3/Modules/FindPackageMessage.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.3/Modules/CMakeParseArguments.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.3/Modules/UseQt4.cmake
+E:/MITK/ALEGC/Apps/ZhiHuangApp/ZhiHuangApp.ini

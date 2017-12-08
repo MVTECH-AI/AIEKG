@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+
+  <extension point="org.blueberry.ui.views">
+    <view id="zhi.huang.plugin1"
+          name="MypluginName"
+          class="MypluginNameUIControl"
+          icon="resources/Image_24.png" />
+  </extension>
+
+</plugin>

@@ -1,0 +1,7 @@
+project(Zhi_Huang_MypluginName)
+
+MACRO_CREATE_MITK_CTK_PLUGIN(
+  EXPORT_DIRECTIVE Zhi_Huang_MypluginName_EXPORT
+  EXPORTED_INCLUDE_SUFFIXES src
+  MODULE_DEPENDENCIES QmitkExt
+)

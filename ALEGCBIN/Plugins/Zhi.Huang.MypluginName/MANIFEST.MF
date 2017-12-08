@@ -1,0 +1,6 @@
+Plugin-SymbolicName: Zhi.Huang.MypluginName
+Plugin-Name: $(plugin-name)
+Require-Plugin: org.mitk.gui.qt.common
+Plugin-Vendor: $(vendor)
+Plugin-Version: 0.1
+

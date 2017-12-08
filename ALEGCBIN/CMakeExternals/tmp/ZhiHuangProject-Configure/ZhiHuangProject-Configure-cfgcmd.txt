@@ -1,0 +1,1 @@
+cmd='C:/Program Files (x86)/CMake/bin/cmake.exe;-CE:/MITK/ALEGCBIN/CMakeExternals/tmp/ZhiHuangProject-Configure/ZhiHuangProject-Configure-cache-$<CONFIG>.cmake;-GVisual Studio 10 2010 Win64;E:/MITK/ALEGC'

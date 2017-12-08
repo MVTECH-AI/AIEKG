@@ -1,0 +1,19 @@
+﻿生成启动时间为 2017/12/7 10:57:37。
+     1>项目“E:\MITK\ALEGCBIN\Apps\ZhiHuangApp\ZhiHuangApp.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“ZhiHuangApp.dir\Release\ZhiHuangApp.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       CustomBuild:
+         所有输出均为最新。
+       ClCompile:
+         所有输出均为最新。
+       Link:
+         所有输出均为最新。
+         ZhiHuangApp.vcxproj -> E:\MITK\ALEGCBIN\bin\Release\ZhiHuangApp.exe
+       FinalizeBuildStatus:
+         正在删除文件“ZhiHuangApp.dir\Release\ZhiHuangApp.unsuccessfulbuild”。
+         正在对“ZhiHuangApp.dir\Release\ZhiHuangApp.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“E:\MITK\ALEGCBIN\Apps\ZhiHuangApp\ZhiHuangApp.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.40
