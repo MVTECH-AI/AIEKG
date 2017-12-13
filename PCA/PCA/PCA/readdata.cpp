@@ -1,10 +1,13 @@
-#include "readdata.h"
+﻿#include "readdata.h"
+#include "mainwindow.h"
+#include <QTextEdit>
 
 
+QString fileFull, fileName; 
 
 ReadData::ReadData()
 {
-	
+
 	//this->readPositiveData();
 	//this->readNegativeData();
 	//this->readTestData();
@@ -167,7 +170,7 @@ int ReadData::getStatus()
 void ReadData::Open()
 {
 
-	QString fileFull, fileName, filePath;  
+	QString filePath;  
 	QFileInfo fi;
 
 
@@ -209,29 +212,31 @@ void ReadData::Open()
 		QMessageBox::information(NULL,"Memory Error","Retry or not",QMessageBox::Yes|QMessageBox::No,QMessageBox::Yes);
 		return;
 	}
-	//display 12 EKG leads
+	/*
 	QCustomPlot *Plot = new QCustomPlot;
-	for(int i =0; i < 12; i++)
-	{
-		Plot->addGraph();
-		Plot->graph()->setPen(QPen(Qt::black));
-		Plot->graph()->setLineStyle(QCPGraph::lsLine); 
+	for(int i =0; i < 12; i++){
+		Plot->addGraph();			
+		Plot->graph(i)->setLineStyle(QCPGraph::lsLine); 
 		QVector<double> X(5000);
 		QVector<double> Y(5000);
-		for (int j = 0;j<5000;j++)
-		{
+		for (int j = 0;j<5000;j++){
 			X[j] = xData[j+5000*i]-10*i;
-			Y[j] = yData[j+5000*i]-1500*i;
+			Y[j] = yData[j+5000*i]-1000*i+12000;
 		}
-		Plot->graph()->addData(X,Y);
-
+		Plot->graph(i)->setPen(QPen(Qt::black));
+		Plot->graph(i)->addData(X,Y);
+	
 	}
 	Plot->xAxis->setLabel("X");
-	Plot->yAxis->setLabel("Y");
-	Plot->xAxis->setRange(0,10);
-	Plot->yAxis->setRange(-1000,1000);
-	Plot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom);
+	Plot->legend->setVisible(true);
+	Plot->xAxis->setRange(0,1);
+	Plot->yAxis->setRange(-200,200);
+	Plot->setAutoAddPlottableToLegend(true);
+	Plot->setInteractions( QCP::iRangeZoom | QCP::iRangeDrag);
+	Plot->setWindowFlags(Qt::Window | Qt::WindowMinimizeButtonHint | Qt::WindowMaximizeButtonHint);
+	Plot->setWindowTitle(tr("EKG"));
+	Plot->resize(1366,768);
 	Plot->show();
+	*/
 
 }
-

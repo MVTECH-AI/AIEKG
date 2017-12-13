@@ -3,10 +3,11 @@
 
 #include <QtGui/QMainWindow>
 #include "ui_mainwindow.h"
+#include <QTextEdit>
+
 
 class ReadData;
 class ImageProcess;
-
 
 class MainWindow : public QMainWindow
 {
@@ -22,8 +23,9 @@ private:
 	Ui::MainWindowClass ui;
 	QMenu *openMenu;
 	QMenu *beginMenu;
+	QMenu *saveMenu;
 	QAction *openAction;
-	QAction *beginAction;
+	//QAction *beginAction;
 	ReadData *pReadData;
 	ImageProcess *pImageProcess;
 

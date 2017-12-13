@@ -8,10 +8,10 @@ MainWindow::MainWindow(QWidget *parent, Qt::WFlags flags)
 	ui.setupUi(this);
 	openMenu = menuBar()->addMenu(tr("open"));
 	openAction = new QAction(tr("&O open"),this);
-	beginMenu = menuBar()->addMenu(tr("begin"));
-	beginAction = new QAction(tr("begin"),this);
+	//beginMenu = menuBar()->addMenu(tr("begin"));
+	//beginAction = new QAction(tr("begin"),this);
 	openMenu->addAction(openAction);
-	beginMenu->addAction(beginAction);
+	//beginMenu->addAction(beginAction);
 	pReadData = new ReadData;
 	pReadData->readtrainingPositiveData();
 	pReadData->readtrainingNegativeData();
@@ -22,7 +22,8 @@ MainWindow::MainWindow(QWidget *parent, Qt::WFlags flags)
 	pImageProcess->doPCA(pReadData);
 	pImageProcess->trainSVMs(pReadData);
 	pImageProcess->testSVMs(pReadData);
-	connect(beginAction,SIGNAL(triggered()),this,SLOT(BeginSVM()))                                                                                                                                                  ;
+	//connect(beginAction,SIGNAL(triggered()),this,SLOT(BeginSVM()));
+	connect(openAction,SIGNAL(triggered()),this, SLOT(BeginSVM()));
 
 	
 

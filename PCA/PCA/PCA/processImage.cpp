@@ -141,7 +141,7 @@ void ImageProcess::testSVMs(ReadData *pst)
 		result = -1;
 		// the result of the trained SVM
 		result = SVM.predict(Mat(pcaTestDst.row(i)));
-		//qDebug() << result << endl;
+		// qDebug() << result << endl;
 		if (result == testLabels[i]){
 			right++;
 		}
@@ -152,6 +152,7 @@ void ImageProcess::testSVMs(ReadData *pst)
 }
 void ImageProcess::predictSVMs(ReadData *pst)
 {
+	// load the trained model
 	CvSVM svm;
 	svm.clear();
 	string modelpath = "svmModel.xml";
@@ -160,6 +161,7 @@ void ImageProcess::predictSVMs(ReadData *pst)
 		svm.load(modelpath.c_str());
 	}
 
+	// prepare the data which will be predicted
 	vector<Mat> pcaRealMat = pst->realMat;
 	realpredictData = asRowMatrix(pcaRealMat,CV_32FC1);
 	PCA pca(realpredictData, Mat(), CV_PCA_DATA_AS_ROW, num_components);
@@ -170,16 +172,19 @@ void ImageProcess::predictSVMs(ReadData *pst)
 	realpredictDstMat = pca.project(realpredictData);
 	realpredictDst = pca.backProject(realpredictDstMat);
 	ofstream writeData("EKG.txt");
+	// show the result and write the abnormal data to EKG.txt
 	 if (svm.predict(Mat(realpredictDst.row(0))) == 1){
-		 qDebug() << 1;
+		 QMessageBox::information(NULL,QString("result"),QString("this EKG is abnormal"));
 			auto *p = pst->realMat[0].ptr<float>(0);
 			for (int j = 0;j < 60000;j++,p++){
 				writeData << *p << " ";
 			}
 			writeData << "\n";
 		}
+	 else{
+		 QMessageBox::information(NULL,QString("result"),QString("this EKG is normal"));
+	 }
 	writeData.close();
-	//qDebug() << svm.predict(Mat(projectedMat.row(0)));
 }
 
 
