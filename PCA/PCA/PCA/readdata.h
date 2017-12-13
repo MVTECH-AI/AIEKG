@@ -42,6 +42,7 @@ public:
 	int ptestSize();
 	int ntestSize();
 	int getStatus();
+	int getCounter();
 private:
 	vector<string> filepath;
 	//vector<string> realfilepath;
@@ -59,6 +60,7 @@ private:
 	int testNegativeSize;
 	int testSize;
 	int trainSize;
+	int predictCounter;
 
 private slots:
 	void Open();

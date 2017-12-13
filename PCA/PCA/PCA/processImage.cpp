@@ -171,11 +171,11 @@ void ImageProcess::predictSVMs(ReadData *pst)
 
 	realpredictDstMat = pca.project(realpredictData);
 	realpredictDst = pca.backProject(realpredictDstMat);
-	ofstream writeData("EKG.txt");
+	ofstream writeData("EKG.txt",ios::app);
 	// show the result and write the abnormal data to EKG.txt
 	 if (svm.predict(Mat(realpredictDst.row(0))) == 1){
 		 QMessageBox::information(NULL,QString("result"),QString("this EKG is abnormal"));
-			auto *p = pst->realMat[0].ptr<float>(0);
+			auto *p = pst->realMat[pst->getCounter()].ptr<float>(0);
 			for (int j = 0;j < 60000;j++,p++){
 				writeData << *p << " ";
 			}

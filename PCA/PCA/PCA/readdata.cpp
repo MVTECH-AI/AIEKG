@@ -7,6 +7,7 @@ QString fileFull, fileName;
 
 ReadData::ReadData()
 {
+	this->predictCounter = -1;
 
 	//this->readPositiveData();
 	//this->readNegativeData();
@@ -18,7 +19,7 @@ void ReadData::readtrainingPositiveData()
 {
 
 	// find all files end with raw within certain direction
-	QDir dir("C:\\Users\\Administrator\\Desktop\\OpenCV\\PCA\\PCA\\PCA\\trainPositive");
+	QDir dir(".\\trainPositive");
 	dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
 	QFileInfoList list = dir.entryInfoList();
 	for (int i = 0; i < list.size(); ++i) {
@@ -48,7 +49,7 @@ void ReadData::readtrainingPositiveData()
 void ReadData::readtrainingNegativeData()
 {
 	// find all files end with raw within certain direction
-	QDir dir("C:\\Users\\Administrator\\Desktop\\OpenCV\\PCA\\PCA\\PCA\\trainNegative");
+	QDir dir(".\\trainNegative");
 	dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
 	QFileInfoList list = dir.entryInfoList();
 	for (int i = 0; i < list.size(); ++i) {
@@ -78,7 +79,7 @@ void ReadData::readtestPositiveData()
 	trainSize =  trainPositiveSize+ trainNegativeSize;
 	
 	// find all files end with raw within certain direction
-	QDir dir("C:\\Users\\Administrator\\Desktop\\OpenCV\\PCA\\PCA\\PCA\\testPositive");
+	QDir dir(".\\testPositive");
 	dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
 	QFileInfoList list = dir.entryInfoList();
 	for (int i = 0; i < list.size(); ++i) {
@@ -109,7 +110,7 @@ void ReadData::readtestNegativeData()
 	trainSize = trainPositiveSize + trainNegativeSize;
 
 	// find all files end with raw within certain direction
-	QDir dir("C:\\Users\\Administrator\\Desktop\\OpenCV\\PCA\\PCA\\PCA\\testNegative");
+	QDir dir(".\\testNegative");
 	dir.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
 	QFileInfoList list = dir.entryInfoList();
 	for (int i = 0; i < list.size(); ++i) {
@@ -167,9 +168,14 @@ int ReadData::getStatus()
 	return this->status;
 }
 
+int ReadData::getCounter()
+{
+	return this->predictCounter;
+}
+
 void ReadData::Open()
 {
-
+	predictCounter += 1;
 	QString filePath;  
 	QFileInfo fi;
 
@@ -183,9 +189,10 @@ void ReadData::Open()
 	//qDebug() << status;
 	realData.push_back(drawData);
 	realMat.push_back(cvCreateMat(1,60000,CV_32FC1));
-	auto *p = realMat[0].ptr<float>(0);
-	for (int j=0;j<60000;j++,p++,realData[0]++){
-			*p = *realData[0];			
+
+	auto *p = realMat[predictCounter].ptr<float>(0);
+	for (int j=0;j<60000;j++,p++,realData[predictCounter]++){
+			*p = *realData[predictCounter];			
 			//qDebug() << *p  <<  " ";
 		}
 
