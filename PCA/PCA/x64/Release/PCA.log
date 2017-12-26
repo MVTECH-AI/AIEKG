@@ -1,0 +1,100 @@
+﻿生成启动时间为 2017/12/20/周三 10:31:56。
+     1>项目“C:\Users\Administrator\Desktop\OpenCV\PCA\PCA\PCA\PCA.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>InitializeBuildStatus:
+         正在对“x64\Release\PCA.unsuccessfulbuild”执行 Touch 任务。
+       CustomBuild:
+         Moc'ing mainwindow.h...
+         Uic'ing mainwindow.ui...
+         Moc'ing readdata.h...
+         Moc'ing processImage.h...
+         Moc'ing qcustomplot.h...
+         Rcc'ing mainwindow.qrc...
+     1>RCC : warning : No resources in 'C:\Users\Administrator\Desktop\OpenCV\PCA\PCA\PCA\mainwindow.qrc'.
+         
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /I.\GeneratedFiles /I. /I"C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" /I.\GeneratedFiles\Release /I"C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" /I"C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" /nologo /W1 /WX- /O2 /D UNICODE /D WIN32 /D QT_DLL /D QT_NO_DEBUG /D NDEBUG /D QT_CORE_LIB /D QT_GUI_LIB /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t- /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc100.pdb" /Gd /TP /errorReport:prompt GeneratedFiles\qrc_mainwindow.cpp
+         qrc_mainwindow.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /I.\GeneratedFiles /I. /I"C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" /I.\GeneratedFiles\Release /I"C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" /I"C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" /nologo /W1 /WX- /O2 /D UNICODE /D WIN32 /D QT_DLL /D QT_NO_DEBUG /D NDEBUG /D QT_CORE_LIB /D QT_GUI_LIB /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t- /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc100.pdb" /Gd /TP /errorReport:prompt GeneratedFiles\Release\moc_mainwindow.cpp GeneratedFiles\Release\moc_processImage.cpp GeneratedFiles\Release\moc_qcustomplot.cpp GeneratedFiles\Release\moc_readdata.cpp main.cpp mainwindow.cpp processImage.cpp qcustomplot.cpp readdata.cpp thread.cpp
+         moc_mainwindow.cpp
+         moc_processImage.cpp
+         moc_qcustomplot.cpp
+         moc_readdata.cpp
+         main.cpp
+         mainwindow.cpp
+         processImage.cpp
+         qcustomplot.cpp
+     1>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\algorithm(3699): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\algorithm(3714): 参见对正在编译的函数 模板 实例化“void std::_Median<_RanIt,bool(__cdecl *)(const QCPDataRange &,const QCPDataRange &)>(_RanIt,_RanIt,_RanIt,_Pr)”的引用
+                 with
+                 [
+                     _RanIt=QList<QCPDataRange>::iterator,
+                     _Pr=bool (__cdecl *)(const QCPDataRange &,const QCPDataRange &)
+                 ]
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\algorithm(3776): 参见对正在编译的函数 模板 实例化“std::pair<_Ty1,_Ty2> std::_Unguarded_partition<_RanIt,bool(__cdecl *)(const QCPDataRange &,const QCPDataRange &)>(_RanIt,_RanIt,_Pr)”的引用
+                 with
+                 [
+                     _Ty1=QList<QCPDataRange>::iterator,
+                     _Ty2=QList<QCPDataRange>::iterator,
+                     _RanIt=QList<QCPDataRange>::iterator,
+                     _Pr=bool (__cdecl *)(const QCPDataRange &,const QCPDataRange &)
+                 ]
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\algorithm(3806): 参见对正在编译的函数 模板 实例化“void std::_Sort<_Iter,int,bool(__cdecl *)(const QCPDataRange &,const QCPDataRange &)>(_RanIt,_RanIt,_Diff,_Pr)”的引用
+                 with
+                 [
+                     _Iter=QList<QCPDataRange>::iterator,
+                     _RanIt=QList<QCPDataRange>::iterator,
+                     _Diff=int,
+                     _Pr=bool (__cdecl *)(const QCPDataRange &,const QCPDataRange &)
+                 ]
+                 qcustomplot.cpp(2580): 参见对正在编译的函数 模板 实例化“void std::sort<QList<T>::iterator,bool(__cdecl *)(const QCPDataRange &,const QCPDataRange &)>(_RanIt,_RanIt,_Pr)”的引用
+                 with
+                 [
+                     T=QCPDataRange,
+                     _RanIt=QList<QCPDataRange>::iterator,
+                     _Pr=bool (__cdecl *)(const QCPDataRange &,const QCPDataRange &)
+                 ]
+     1>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\algorithm(3699): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\algorithm(3700): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\algorithm(3700): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\algorithm(3701): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\algorithm(3701): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\algorithm(3702): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\algorithm(3702): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+         readdata.cpp
+         thread.cpp
+         Generating Code...
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator\Desktop\OpenCV\PCA\PCA\x64\Release\\PCA.exe" /NOLOGO /LIBPATH:"C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib" qtmain.lib QtCore4.lib QtGui4.lib opencv_objdetect249.lib opencv_ts249.lib opencv_video249.lib opencv_nonfree249.lib opencv_ocl249.lib opencv_photo249.lib opencv_stitching249.lib opencv_superres249.lib opencv_videostab249.lib opencv_calib3d249.lib opencv_contrib249.lib opencv_core249.lib opencv_features2d249.lib opencv_flann249.lib opencv_gpu249.lib opencv_highgui249.lib opencv_imgproc249.lib opencv_legacy249.lib opencv_ml249.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"x64\Release\PCA.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Administrator\Desktop\OpenCV\PCA\PCA\x64\Release\PCA.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Administrator\Desktop\OpenCV\PCA\PCA\x64\Release\PCA.lib" /MACHINE:X64 x64\Release\qrc_mainwindow.obj
+         x64\Release\moc_mainwindow.obj
+         x64\Release\moc_processImage.obj
+         x64\Release\moc_qcustomplot.obj
+         x64\Release\moc_readdata.obj
+         x64\Release\main.obj
+         x64\Release\mainwindow.obj
+         x64\Release\processImage.obj
+         x64\Release\qcustomplot.obj
+         x64\Release\readdata.obj
+         x64\Release\thread.obj
+            正在创建库 C:\Users\Administrator\Desktop\OpenCV\PCA\PCA\x64\Release\PCA.lib 和对象 C:\Users\Administrator\Desktop\OpenCV\PCA\PCA\x64\Release\PCA.exp
+     1>thread.obj : error LNK2019: 无法解析的外部符号 "__declspec(dllimport) public: __cdecl QTcpSocket::QTcpSocket(class QObject *)" (__imp_??0QTcpSocket@@QEAA@PEAVQObject@@@Z)，该符号在函数 "public: __cdecl Tcpclient::Tcpclient(void)" (??0Tcpclient@@QEAA@XZ) 中被引用
+     1>thread.obj : error LNK2001: 无法解析的外部符号 "public: virtual struct QMetaObject const * __cdecl QTcpSocket::metaObject(void)const " (?metaObject@QTcpSocket@@UEBAPEBUQMetaObject@@XZ)
+     1>thread.obj : error LNK2001: 无法解析的外部符号 "public: virtual void * __cdecl QTcpSocket::qt_metacast(char const *)" (?qt_metacast@QTcpSocket@@UEAAPEAXPEBD@Z)
+     1>thread.obj : error LNK2001: 无法解析的外部符号 "public: virtual int __cdecl QTcpSocket::qt_metacall(enum QMetaObject::Call,int,void * *)" (?qt_metacall@QTcpSocket@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z)
+     1>thread.obj : error LNK2001: 无法解析的外部符号 "public: virtual bool __cdecl QAbstractSocket::isSequential(void)const " (?isSequential@QAbstractSocket@@UEBA_NXZ)
+     1>thread.obj : error LNK2001: 无法解析的外部符号 "public: virtual void __cdecl QAbstractSocket::close(void)" (?close@QAbstractSocket@@UEAAXXZ)
+     1>thread.obj : error LNK2001: 无法解析的外部符号 "public: virtual bool __cdecl QAbstractSocket::atEnd(void)const " (?atEnd@QAbstractSocket@@UEBA_NXZ)
+     1>thread.obj : error LNK2001: 无法解析的外部符号 "public: virtual __int64 __cdecl QAbstractSocket::bytesAvailable(void)const " (?bytesAvailable@QAbstractSocket@@UEBA_JXZ)
+     1>thread.obj : error LNK2001: 无法解析的外部符号 "public: virtual __int64 __cdecl QAbstractSocket::bytesToWrite(void)const " (?bytesToWrite@QAbstractSocket@@UEBA_JXZ)
+     1>thread.obj : error LNK2001: 无法解析的外部符号 "public: virtual bool __cdecl QAbstractSocket::canReadLine(void)const " (?canReadLine@QAbstractSocket@@UEBA_NXZ)
+     1>thread.obj : error LNK2001: 无法解析的外部符号 "public: virtual bool __cdecl QAbstractSocket::waitForReadyRead(int)" (?waitForReadyRead@QAbstractSocket@@UEAA_NH@Z)
+     1>thread.obj : error LNK2001: 无法解析的外部符号 "public: virtual bool __cdecl QAbstractSocket::waitForBytesWritten(int)" (?waitForBytesWritten@QAbstractSocket@@UEAA_NH@Z)
+     1>thread.obj : error LNK2001: 无法解析的外部符号 "protected: virtual __int64 __cdecl QAbstractSocket::readData(char *,__int64)" (?readData@QAbstractSocket@@MEAA_JPEAD_J@Z)
+     1>thread.obj : error LNK2001: 无法解析的外部符号 "protected: virtual __int64 __cdecl QAbstractSocket::readLineData(char *,__int64)" (?readLineData@QAbstractSocket@@MEAA_JPEAD_J@Z)
+     1>thread.obj : error LNK2001: 无法解析的外部符号 "protected: virtual __int64 __cdecl QAbstractSocket::writeData(char const *,__int64)" (?writeData@QAbstractSocket@@MEAA_JPEBD_J@Z)
+     1>thread.obj : error LNK2019: 无法解析的外部符号 "__declspec(dllimport) public: virtual __cdecl QTcpSocket::~QTcpSocket(void)" (__imp_??1QTcpSocket@@UEAA@XZ)，该符号在函数 "public: virtual __cdecl Tcpclient::~Tcpclient(void)" (??1Tcpclient@@UEAA@XZ) 中被引用
+     1>C:\Users\Administrator\Desktop\OpenCV\PCA\PCA\x64\Release\\PCA.exe : fatal error LNK1120: 16 个无法解析的外部命令
+     1>已完成生成项目“C:\Users\Administrator\Desktop\OpenCV\PCA\PCA\PCA\PCA.vcxproj”(rebuild 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:17.55
