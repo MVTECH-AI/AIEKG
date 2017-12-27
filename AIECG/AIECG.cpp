@@ -248,9 +248,29 @@ void AIECG::loadSignals()
 		Plot->graph()->addData(X,Y);
 	}
 	Plot->xAxis->setLabel("X");
-	Plot->yAxis->setLabel("Y");
 	Plot->xAxis->setRange(0,1);
+	Plot->xAxis->setPadding(5); // a bit more space to the left border
+	Plot->xAxis->setBasePen(QPen(Qt::red));
+	Plot->xAxis->setTickPen(QPen(Qt::red));
+	Plot->xAxis->setSubTickPen(QPen(Qt::red));
+	Plot->xAxis->grid()->setSubGridVisible(true);
+	Plot->xAxis->setTickLabelColor(Qt::red);
+	Plot->xAxis->setLabelColor(Qt::red);
+	Plot->xAxis->grid()->setPen(QPen(QColor(255, 0, 0), 0, Qt::SolidLine));
+	Plot->xAxis->grid()->setSubGridPen(QPen(QColor(255, 0, 0), 0, Qt::DotLine));
+
+	Plot->yAxis->setLabel("Y");
 	Plot->yAxis->setRange(-200,200);
+	Plot->yAxis->setPadding(5); // a bit more space to the left border
+	Plot->yAxis->setBasePen(QPen(Qt::red));
+	Plot->yAxis->setTickPen(QPen(Qt::red));
+	Plot->yAxis->setSubTickPen(QPen(Qt::red));
+	Plot->yAxis->grid()->setSubGridVisible(true);
+	Plot->yAxis->setTickLabelColor(Qt::red);
+	Plot->yAxis->setLabelColor(Qt::red);
+	Plot->yAxis->grid()->setPen(QPen(QColor(255, 0, 0), 0, Qt::SolidLine));
+	Plot->yAxis->grid()->setSubGridPen(QPen(QColor(255, 0, 0), 0, Qt::DotLine));
+
 	Plot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom);
 	subWindow = mdiArea->addSubWindow(Plot);
 	subWindow->resize(600, 400);
