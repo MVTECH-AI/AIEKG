@@ -243,12 +243,12 @@ void AIECG::loadSignals()
 		for (int j = 0;j<5000;j++)
 		{
 			X[j] = xData[j+5000*i]-10*i;
-			Y[j] = yData[j+5000*i]-1500*i+12000;
+			Y[j] = yData[j+5000*i]-2000*i+6000;
 		}
 		Plot->graph()->addData(X,Y);
 	}
 	Plot->xAxis->setLabel("X");
-	Plot->xAxis->setRange(0,1);
+	Plot->xAxis->setRange(0,10);
 	Plot->xAxis->setPadding(5); // a bit more space to the left border
 	Plot->xAxis->setBasePen(QPen(Qt::red));
 	Plot->xAxis->setTickPen(QPen(Qt::red));
@@ -260,7 +260,7 @@ void AIECG::loadSignals()
 	Plot->xAxis->grid()->setSubGridPen(QPen(QColor(255, 0, 0), 0, Qt::DotLine));
 
 	Plot->yAxis->setLabel("Y");
-	Plot->yAxis->setRange(-200,200);
+	Plot->yAxis->setRange(-16500,6500);
 	Plot->yAxis->setPadding(5); // a bit more space to the left border
 	Plot->yAxis->setBasePen(QPen(Qt::red));
 	Plot->yAxis->setTickPen(QPen(Qt::red));
