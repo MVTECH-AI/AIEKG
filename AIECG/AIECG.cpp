@@ -253,6 +253,7 @@ void AIECG::loadSignals()
 	Plot->yAxis->setRange(-200,200);
 	Plot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom);
 	subWindow = mdiArea->addSubWindow(Plot);
+	subWindow->resize(600, 400);
 	subWindow->setWindowState(Qt::WindowMaximized);
 	subWindow->setWindowTitle("Twelve lead ECG waveform");
 	subWindow->show();
