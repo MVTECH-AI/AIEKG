@@ -11,11 +11,11 @@ class ImageProcess : public ReadData
 	Q_OBJECT
 public:
 	ImageProcess();
-	Mat asRowMatrix( vector<Mat>& src, int rtype, double alpha , double beta );
-	void doPCA( ReadData *pst);
-	void trainSVMs( ReadData *pst);
-	void testSVMs( ReadData *pst);
-	void predictSVMs(ReadData *pst);
+	Mat asRowMatrix(vector<Mat>& src, int rtype, double alpha , double beta);
+	void doPCA(ReadData *pst);
+	void trainSVMs(ReadData *pst);
+	void testSVMs(ReadData *pst);
+	int predictSVMs(ReadData *pst);
 	void beginTransmission(ReadData *pst);
 	int num_components;
 
@@ -38,11 +38,5 @@ private:
 	Mat realpredictData;
 	Mat realpredictDstMat;
 	Mat realpredictDst;
-
-
-
 };
-
-
-
-#endif
+#endif//PROCESSIMAGE_H

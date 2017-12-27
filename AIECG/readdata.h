@@ -24,6 +24,8 @@
 using namespace cv;
 using namespace std;
 
+extern QVector<double> yData;
+extern QVector<double> xData;
 
 class ReadData : public QWidget
 {
@@ -47,11 +49,13 @@ public:
 	int ntestSize();
 	int getStatus();
 	int getCounter();
+	void readData();
 private:
 	vector<string> filepath;
 	//vector<string> realfilepath;
 	short MyData[RAWDATALEN*12];
 	short drawData[RAWDATALEN*12];
+
 	vector<short *> srcData;
 	vector<short *> testData;
 	vector<short *> realData;
@@ -67,9 +71,11 @@ private:
 	int trainSize;
 	int predictCounter;
 
+
+
 private slots:
 	void loadSignal();
-	void loadSignals();
+	//void loadSignals();
 	void saveSignal();
 
 };

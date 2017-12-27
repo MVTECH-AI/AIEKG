@@ -22,7 +22,7 @@ static const uint qt_meta_data_ReadData[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,14 +32,12 @@ static const uint qt_meta_data_ReadData[] = {
  // slots: signature, parameters, type, tag, flags
       10,    9,    9,    9, 0x08,
       23,    9,    9,    9, 0x08,
-      37,    9,    9,    9, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_ReadData[] = {
-    "ReadData\0\0loadSignal()\0loadSignals()\0"
-    "saveSignal()\0"
+    "ReadData\0\0loadSignal()\0saveSignal()\0"
 };
 
 void ReadData::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -49,8 +47,7 @@ void ReadData::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         ReadData *_t = static_cast<ReadData *>(_o);
         switch (_id) {
         case 0: _t->loadSignal(); break;
-        case 1: _t->loadSignals(); break;
-        case 2: _t->saveSignal(); break;
+        case 1: _t->saveSignal(); break;
         default: ;
         }
     }
@@ -89,9 +86,9 @@ int ReadData::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 2;
     }
     return _id;
 }

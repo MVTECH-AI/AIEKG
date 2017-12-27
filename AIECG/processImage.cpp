@@ -4,9 +4,7 @@
 ImageProcess::ImageProcess()
 {
 	right = 0;
-
 }
-
 
 // the given image is transformed into a row matrix
 Mat ImageProcess::asRowMatrix( vector<Mat>& src, int rtype, double alpha = 1, double beta = 0)
@@ -20,6 +18,7 @@ Mat ImageProcess::asRowMatrix( vector<Mat>& src, int rtype, double alpha = 1, do
 
 	// the dimension of the sample
 	size_t d = src[0].total();
+
 	// copy data
 	Mat data(n, d, rtype);
 
@@ -49,13 +48,9 @@ Mat ImageProcess::asRowMatrix( vector<Mat>& src, int rtype, double alpha = 1, do
 	return data;
 }
 
-
-
 // Principal Component Analysis
-
 void ImageProcess::doPCA( ReadData *pst)
 {
-
 	vector<Mat>pcaMat = pst->srcMat;
 	pcaData = asRowMatrix(pcaMat,CV_32FC1);
 	// qDebug() << pcaData.rows << pcaData.cols;
@@ -82,13 +77,10 @@ void ImageProcess::doPCA( ReadData *pst)
 	pcaDst = pca.backProject(pcaDstMat);
 	//qDebug() << pcaDst.cols << pcaDst.rows << endl; 
 	//117 rows, 60000 cols
-
-
 }
 
 void ImageProcess::trainSVMs( ReadData *pst)
 {
-
 	// Set up training data
 	for (int n = 0; n < pst->ptrianSize(); n++ ){
 		trainingLabels.push_back(1);
@@ -122,7 +114,6 @@ void ImageProcess::trainSVMs( ReadData *pst)
 	// Train the SVM
 	//SVM.train(trainingData, trainingClasses, Mat(), Mat(), SVM_params);
 
-
 	SVM.train_auto(trainingData,trainingClasses,Mat(),Mat(),SVM_params,
 		10,
 		SVM.get_default_grid(CvSVM::C),
@@ -132,10 +123,7 @@ void ImageProcess::trainSVMs( ReadData *pst)
 		coeffGrid,
 		degreeGrid,
 		TRUE);
-
-
 	SVM.save("svmModel.xml");
-
 }
 
 
@@ -152,13 +140,12 @@ void ImageProcess::testSVMs(ReadData *pst)
 	// 56 rows, 60000 cols 
 
 	// Set up test data
-	for (int n = 0; n < pst->ptestSize(); n++ ){
+	for (int n = 0; n < pst->ptestSize(); n++){
 		testLabels.push_back(1);
 	}
 	for (int m = 0; m < pst->ntestSize(); m++){
 		testLabels.push_back(0);
 	}
-
 
 	for (int i = 0; i < pcaTestDstMat.rows; i++){
 		result = -1;
@@ -168,12 +155,11 @@ void ImageProcess::testSVMs(ReadData *pst)
 		if (result == testLabels[i]){
 			right++;
 		}
-
 	}
 	qDebug() << right * 1.0 / testLabels.size() * 100;
 	//0.8333333
 }
-void ImageProcess::predictSVMs(ReadData *pst)
+int ImageProcess::predictSVMs(ReadData *pst)
 {
 	// load the trained model
 	CvSVM svm;
@@ -198,18 +184,29 @@ void ImageProcess::predictSVMs(ReadData *pst)
 	int response = int(svm.predict(Mat(realpredictDst.row(0))));
 	// show the result and write the abnormal data to EKG.txt
 	if (response == 1){
-		QMessageBox::information(NULL,QString("result"),QString("this EKG is abnormal"));
+//		QMessageBox::information(NULL,QString("result"),QString("this EKG is abnormal"));
 		auto *p = pst->realMat.ptr<float>(0);
 		for (int j = 0;j < 60000;j++,p++){
 			writeData << *p << " ";
 		}
 		writeData << "\n";
+		writeData.close();
+
+		// transmit data
+		beginTransmission(pst);
+
+		//remove file to result if the ekg is abnormal
+		QString toDir = ".\\result";
+		QString dstFile = toDir + "//" + pst->getDataName();
+		QFile::copy(pst->getDataName(),dstFile);
+		QFile::remove(pst->getDataName());
 	}
 	else if(response == 0){
-		QMessageBox::information(NULL,QString("result"),QString("this EKG is normal"));
+//		QMessageBox::information(NULL,QString("result"),QString("this EKG is normal"));
 	}
-	writeData.close();
-	//beginTransmission(pst);
+	
+	
+	return response;
 }
 
 void ImageProcess::beginTransmission(ReadData *pst)
@@ -228,7 +225,6 @@ void ImageProcess::beginTransmission(ReadData *pst)
 	client->write(" ");
 	client->write(buffer,length-1);
 	delete buffer;
-
 }
 
 

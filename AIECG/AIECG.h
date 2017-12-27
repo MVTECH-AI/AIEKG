@@ -4,6 +4,7 @@
 #include <QMenu>
 #include <QAction>
 #include <QToolBar>
+#include <QSplitter>
 #include <QMdiArea>
 #include <QLabel>
 #include <QTextEdit>
@@ -37,14 +38,14 @@ public:
 	~AIECG();
 
 private slots:
-	void newfile();	
-	void print();
-	void printPreview();
-	void setUpPage();
-	void printDocument(QPrinter *printer);
+	void newfile();
 	void cut();
 	void copy();
 	void paste();
+	void print();
+	void printPreview();
+	void setUpPage();
+	void printDocument(QPrinter *printer);	
 	void about();
 
 	void openChannelWidnow();
@@ -53,21 +54,22 @@ private slots:
 	void openIBISignalWindow();
 	void openTextWindow();
 
+	void loadSignals();
 	void loadText();
-
 	void beginSVM();
 
 private:
 	void createMenus();
-	void createActions();
 	void createToolBars();
+	void createActions();
 	void createStatusBar();
 
-	
 	ReadData *pReadData;
 	ImageProcess *pImageProcess;
+	int result;
 	Display *display;
 	Editor *editor;
+	QSplitter *splitter;
 	QMdiArea *mdiArea;
 	QTextEdit *textEdit;
 	QVBoxLayout *mainLayout;

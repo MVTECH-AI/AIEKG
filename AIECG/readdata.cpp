@@ -183,8 +183,8 @@ void ReadData::loadSignal()
 	}
 
 	// for drawing the EKG	
-	QVector<double> yData(60000);
-	QVector<double> xData(60000);
+	//QVector<double> yData(60000);
+	//QVector<double> xData(60000);
 	xData[0] = 0;
 
 	if (status == 0){
@@ -220,7 +220,7 @@ void ReadData::loadSignal()
 	Plot->show();
 }
 
-void ReadData::loadSignals()
+void ReadData::readData()
 
 {
 	// for read 
@@ -240,8 +240,10 @@ void ReadData::loadSignals()
 	}
 
 	// for drawing the EKG	
-	QVector<double> yData(60000);
-	QVector<double> xData(60000);
+
+//	QVector<double> yData(60000);
+//	QVector<double> xData(60000);
+
 	xData[0] = 0;
 
 	if (status == 0){
@@ -261,32 +263,9 @@ void ReadData::loadSignals()
 		QMessageBox::information(NULL,"Memory Error","Retry or not",QMessageBox::Yes|QMessageBox::No,QMessageBox::Yes);
 		return;
 	}
-
-	 QCustomPlot *Plot = new QCustomPlot;
-	for(int i =0; i < 12; i++)
-	{
-		Plot->addGraph();
-		Plot->graph()->setPen(QPen(Qt::black));
-		Plot->graph()->setLineStyle(QCPGraph::lsLine); 
-		QVector<double> X(5000);
-		QVector<double> Y(5000);
-		for (int j = 0;j<5000;j++)
-		{
-			X[j] = xData[j+5000*i]-10*i;
-			Y[j] = yData[j+5000*i]-1500*i+12000;
-		}
-		Plot->graph()->addData(X,Y);
-	}
-	Plot->xAxis->setLabel("X");
-	Plot->yAxis->setLabel("Y");
-	Plot->xAxis->setRange(0,1);
-	Plot->yAxis->setRange(-200,200);
-	Plot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom);
-	Plot->setWindowFlags(Qt::Window | Qt::WindowMinimizeButtonHint | Qt::WindowMaximizeButtonHint);
-	Plot->setWindowTitle(tr("EKG"));
-	Plot->resize(1366,768);
-	Plot->show();
 }
+
+
 
 void ReadData::saveSignal()
 {	

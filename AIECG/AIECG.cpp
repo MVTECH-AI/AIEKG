@@ -1,5 +1,8 @@
 #include "AIECG.h"
 
+QVector<double> yData(60000);
+QVector<double> xData(60000);
+
 AIECG::AIECG(QWidget *parent)
 	: QMainWindow(parent)
 {
@@ -16,6 +19,12 @@ AIECG::AIECG(QWidget *parent)
 	pImageProcess->testSVMs(pReadData);
 	//connect(beginAction,SIGNAL(triggered()),this,SLOT(BeginSVM()));
 	mdiArea = new QMdiArea;
+	textEdit = new QTextEdit;
+
+	splitter = new QSplitter(Qt::Vertical);
+	splitter->addWidget(mdiArea);
+	splitter->addWidget(textEdit);
+	splitter->setStretchFactor(10, 1);
 
 	display =new Display;
 	serialdialog = new SerialDialog;
@@ -26,11 +35,271 @@ AIECG::AIECG(QWidget *parent)
 	createMenus();
 	createToolBars();
 
+	statusBar()->showMessage(tr("Ready"),2000);
+
 //	image.load("C:/CppWorkspace/print/image/flower.jpg"); //导入图片
 
 	setWindowIcon(QIcon("C:/CppWorkspace/AIECG/images/AIECG.png"));
-	setCentralWidget(mdiArea);
+	setCentralWidget(splitter);
 	setWindowTitle("AIECG");
+}
+
+void AIECG::newfile()
+{
+	QDialog *w = new QDialog;
+	windowLabel = new QLabel(tr("window as"));
+	windowListWidget = new QListWidget;
+	okButton = new QPushButton(tr("OK"));
+	cancelButton = new QPushButton(tr("Cancel"));
+
+	windowListWidget->addItem("Manual channel definition window");
+	windowListWidget->addItem("Manual plot-signal definition window");
+	windowListWidget->addItem("Manual grid-signal definition window");
+	windowListWidget->addItem("Manual IBI-signal definition window");
+	windowListWidget->addItem("Text window");
+
+	hboxLayout = new QHBoxLayout;
+	hboxLayout->addWidget(okButton);
+	hboxLayout->addWidget(cancelButton);
+
+	vboxLayout = new QVBoxLayout;
+	vboxLayout->addWidget(windowLabel);
+	vboxLayout->addWidget(windowListWidget);
+	vboxLayout->addLayout(hboxLayout);
+
+	connect(windowListWidget, SIGNAL(itemDoubleClicked(QListWidgetItem *)), this, SLOT(openChannelWidnow()));
+	connect(windowListWidget, SIGNAL(itemDoubleClicked(QListWidgetItem *)), this, SLOT(openPlotSignalWindow()));
+	connect(windowListWidget, SIGNAL(itemDoubleClicked(QListWidgetItem *)), this, SLOT(openGridSignalWindow()));
+	connect(windowListWidget, SIGNAL(itemDoubleClicked(QListWidgetItem *)), this, SLOT(openIBISignalWindow()));
+	connect(windowListWidget, SIGNAL(itemDoubleClicked(QListWidgetItem *)), this, SLOT(openTextWindow()));
+
+	connect(okButton, SIGNAL(clicked()), this, SLOT(openChannelWidnow()));
+	connect(okButton, SIGNAL(clicked()), this, SLOT(openPlotSignalWindow()));
+	connect(okButton, SIGNAL(clicked()), this, SLOT(openGridSignalWindow()));
+	connect(okButton, SIGNAL(clicked()), this, SLOT(openIBISignalWindow()));
+	connect(okButton, SIGNAL(clicked()), this, SLOT(openTextWindow()));
+
+	connect(cancelButton, SIGNAL(clicked()), w, SLOT(close()));
+
+	w->setLayout(vboxLayout);
+	w->setWindowTitle("Open");
+	w->show();
+}
+
+void AIECG::cut()
+{
+	board = QApplication::clipboard();//获得系统剪贴板对象
+	board->setText("Text from Qt Application");//通过setText()将数据放置到剪贴板
+}
+
+void AIECG::copy()
+{
+	board = QApplication::clipboard();
+	board->setText("Text from Qt Application");
+}
+
+void AIECG::paste()
+{
+	board = QApplication::clipboard();
+	QString str = board->text();//从剪贴板获得数据
+	QMessageBox::information(NULL, "From clipboard", str);
+}
+
+void AIECG::print()
+{
+	QPrinter printer; //构建新对象
+	QPrintDialog printDialog(&printer, this);
+
+	if (printDialog.exec()) //用于判断用户是否点击“打印”按钮
+	{
+		QPainter painter(&printer);
+		QRect rect = painter.viewport(); //获取QPainter对象的矩形区域
+		QSize size = image.size(); //获取图片的大小
+		size.scale(rect.size(), Qt::KeepAspectRatio);//按照图形比例大小重新设置视口矩形区域
+
+		//打印
+		painter.setViewport(rect.x(), rect.y(), size.width(), size.height());
+		painter.setWindow(image.rect());
+		painter.drawImage(0, 0, image);
+	}
+}
+
+void AIECG::printPreview()
+{
+	QPrinter printer;
+	QPrintPreviewDialog previewDialog(&printer, this);
+
+	connect(&previewDialog, SIGNAL(paintRequested(QPrinter*)), this, SLOT(printDocument(QPrinter*)));
+
+	previewDialog.exec();
+}
+
+void AIECG::setUpPage()
+{
+	QPrinter printer;
+	QPageSetupDialog pageSetUpDialog(&printer, this);
+	if (pageSetUpDialog.exec() == QDialog::Accepted)
+	{
+		printer.setOrientation(QPrinter::Landscape);
+	} 
+	else
+	{
+		printer.setOrientation(QPrinter::Portrait);
+	}
+}
+
+void AIECG::printDocument(QPrinter *printer)
+{
+	textEdit->print(printer); 
+}
+
+void AIECG::about()
+{
+	QMessageBox::about(this,tr("About AIECG"),
+		tr("<h2>AIECG 1.1</h2>"
+		"<p>Copyright &copy; 2017 Software Inc."
+		"<p>AIECG is a small application that "
+		"demonstrates QAction, QMainWindow, QMenuBar, "
+		"QStatusBar, QToolBar, and many other Qt classes."));
+}
+
+void AIECG::openChannelWidnow()
+{
+	if(windowListWidget->currentRow() == 0)
+	{
+		editor = new Editor;
+		editor->newFile();
+		subWindow = mdiArea->addSubWindow(editor);
+		subWindow->setWindowState(Qt::WindowMaximized);		
+		subWindow->setWindowTitle("Manual channel definition window");
+		subWindow->show();
+	}
+}
+
+void AIECG::openPlotSignalWindow()
+{
+
+	if (windowListWidget->currentRow() == 1  )
+	{
+		editor = new Editor;
+		editor->newFile();
+		subWindow = mdiArea->addSubWindow(editor);
+		subWindow->setWindowState(Qt::WindowMaximized);		
+		subWindow->setWindowTitle("Manual plot-signal definition window");
+		subWindow->show();
+	}
+}
+
+void AIECG::openGridSignalWindow()
+{
+	if (windowListWidget->currentRow() == 2 )
+	{
+		editor = new Editor;
+		editor->newFile();
+		subWindow = mdiArea->addSubWindow(editor);
+		subWindow->setWindowState(Qt::WindowMaximized);		
+		subWindow->setWindowTitle("Manual grid-signal definition window");
+		subWindow->show();
+	}
+}
+
+void AIECG::openIBISignalWindow()
+{
+	if (windowListWidget->currentRow() == 3 )
+	{
+		editor = new Editor;
+		editor->newFile();
+		subWindow = mdiArea->addSubWindow(editor);
+		subWindow->setWindowState(Qt::WindowMaximized);		
+		subWindow->setWindowTitle("Manual IBI-signal definition window");
+		subWindow->show();
+	}
+}
+
+void AIECG::openTextWindow()
+{
+	if (windowListWidget->currentRow() == 4)
+	{
+		editor = new Editor;
+		editor->newFile();
+		subWindow = mdiArea->addSubWindow(editor);
+		subWindow->setWindowState(Qt::WindowMaximized);		
+		subWindow->setWindowTitle("Text window");
+		subWindow->show();
+	}
+}
+
+void AIECG::loadSignals()
+{
+	pReadData->readData();
+	QCustomPlot *Plot = new QCustomPlot;
+	for(int i =0; i < 12; i++)
+	{
+		Plot->addGraph();
+		Plot->graph()->setPen(QPen(Qt::black));
+		Plot->graph()->setLineStyle(QCPGraph::lsLine); 
+		QVector<double> X(5000);
+		QVector<double> Y(5000);
+		for (int j = 0;j<5000;j++)
+		{
+			X[j] = xData[j+5000*i]-10*i;
+			Y[j] = yData[j+5000*i]-1500*i+12000;
+		}
+		Plot->graph()->addData(X,Y);
+	}
+	Plot->xAxis->setLabel("X");
+	Plot->yAxis->setLabel("Y");
+	Plot->xAxis->setRange(0,1);
+	Plot->yAxis->setRange(-200,200);
+	Plot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom);
+	subWindow = mdiArea->addSubWindow(Plot);
+	subWindow->setWindowState(Qt::WindowMaximized);
+	subWindow->setWindowTitle("Twelve lead ECG waveform");
+	subWindow->show();
+}
+
+void AIECG::loadText()
+{
+	QString fileName = QFileDialog::getOpenFileName(this, tr("Load Text"), QString(),
+		tr("Ascii file(*.*);;Text file(*.txt);;Macro file(*.dpm);;Macro list file(*.dpl)"));
+
+	if (!fileName.isEmpty())
+	{
+		QFile file(fileName);
+		if (!file.open(QIODevice::ReadOnly))
+		{
+			QMessageBox::critical(this,tr("ERROR"),tr("couldn't open the file"));
+			return;
+		} 
+		else
+		{
+			QTextStream stream(&file);
+			editor = new Editor;
+			editor->newFile();
+			editor->setText(stream.readAll());
+			subWindow = mdiArea->addSubWindow(editor);
+			subWindow->setWindowState(Qt::WindowMaximized);	
+
+			file.flush();
+		}
+	}
+	else
+	{
+		QMessageBox::critical(this,tr("ERROR"),tr("you don't open any file"));
+	}
+}
+
+void AIECG::beginSVM()
+{
+	result = pImageProcess->predictSVMs(pReadData);
+	if (result == 1)
+	{
+		textEdit->setText("the ECG is abnormal");	
+	}
+	else if (result == 0)
+	{
+		textEdit->setText("the ECG is normal");	
+	}
 }
 
 void AIECG::createMenus()
@@ -166,8 +435,8 @@ void AIECG::createActions()
 
 	LoadSignalsAction = new QAction(tr("&Load signals"), this);
 	LoadSignalsAction->setStatusTip(tr("allows simultaneous loading of several signals from the disk."));
-	connect(LoadSignalsAction, SIGNAL(triggered()), pReadData, SLOT(loadSignals()));
-	connect(LoadSignalsAction,SIGNAL(triggered()),this,SLOT(beginSVM()));
+	connect(LoadSignalsAction, SIGNAL(triggered()), this, SLOT(loadSignals()));
+	connect(LoadSignalsAction, SIGNAL(triggered()), this, SLOT(beginSVM()));
 
 	LoadTextAction = new QAction(tr("&Load text"), this);
 	LoadTextAction->setStatusTip(tr("loads text files or macro source code files from the disk into the text editor window"));
@@ -330,227 +599,6 @@ void AIECG::createStatusBar()
 	statusBar()->addWidget(formulaLabel,1);
 }
 
-void AIECG::newfile()
-{
-	QDialog *w = new QDialog;
-	windowLabel = new QLabel(tr("window as"));
-	windowListWidget = new QListWidget;
-	okButton = new QPushButton(tr("OK"));
-	cancelButton = new QPushButton(tr("Cancel"));
-
-	windowListWidget->addItem("Manual channel definition window");
-	windowListWidget->addItem("Manual plot-signal definition window");
-	windowListWidget->addItem("Manual grid-signal definition window");
-	windowListWidget->addItem("Manual IBI-signal definition window");
-	windowListWidget->addItem("Text window");
-
-	hboxLayout = new QHBoxLayout;
-	hboxLayout->addWidget(okButton);
-	hboxLayout->addWidget(cancelButton);
-
-	vboxLayout = new QVBoxLayout;
-	vboxLayout->addWidget(windowLabel);
-	vboxLayout->addWidget(windowListWidget);
-	vboxLayout->addLayout(hboxLayout);
-
-	connect(windowListWidget, SIGNAL(itemDoubleClicked(QListWidgetItem *)), this, SLOT(openChannelWidnow()));
-	connect(windowListWidget, SIGNAL(itemDoubleClicked(QListWidgetItem *)), this, SLOT(openPlotSignalWindow()));
-	connect(windowListWidget, SIGNAL(itemDoubleClicked(QListWidgetItem *)), this, SLOT(openGridSignalWindow()));
-	connect(windowListWidget, SIGNAL(itemDoubleClicked(QListWidgetItem *)), this, SLOT(openIBISignalWindow()));
-	connect(windowListWidget, SIGNAL(itemDoubleClicked(QListWidgetItem *)), this, SLOT(openTextWindow()));
-
-	connect(okButton, SIGNAL(clicked()), this, SLOT(openChannelWidnow()));
-	connect(okButton, SIGNAL(clicked()), this, SLOT(openPlotSignalWindow()));
-	connect(okButton, SIGNAL(clicked()), this, SLOT(openGridSignalWindow()));
-	connect(okButton, SIGNAL(clicked()), this, SLOT(openIBISignalWindow()));
-	connect(okButton, SIGNAL(clicked()), this, SLOT(openTextWindow()));
-
-	connect(cancelButton, SIGNAL(clicked()), w, SLOT(close()));
-
-	w->setLayout(vboxLayout);
-	w->setWindowTitle("Open");
-	w->show();
-}
-
-void AIECG::openChannelWidnow()
-{
-	if(windowListWidget->currentRow() == 0)
-	{
-		editor = new Editor;
-		editor->newFile();
-		subWindow = mdiArea->addSubWindow(editor);
-		subWindow->setWindowState(Qt::WindowMaximized);		
-		subWindow->setWindowTitle("Manual channel definition window");
-		subWindow->show();
-	}
-}
-
-void AIECG::openPlotSignalWindow()
-{
-
-	if (windowListWidget->currentRow() == 1  )
-	{
-		editor = new Editor;
-		editor->newFile();
-		subWindow = mdiArea->addSubWindow(editor);
-		subWindow->setWindowState(Qt::WindowMaximized);		
-		subWindow->setWindowTitle("Manual plot-signal definition window");
-		subWindow->show();
-	}
-}
-
-void AIECG::openGridSignalWindow()
-{
-	if (windowListWidget->currentRow() == 2 )
-	{
-		editor = new Editor;
-		editor->newFile();
-		subWindow = mdiArea->addSubWindow(editor);
-		subWindow->setWindowState(Qt::WindowMaximized);		
-		subWindow->setWindowTitle("Manual grid-signal definition window");
-		subWindow->show();
-	}
-}
-
-void AIECG::openIBISignalWindow()
-{
-	if (windowListWidget->currentRow() == 3 )
-	{
-		editor = new Editor;
-		editor->newFile();
-		subWindow = mdiArea->addSubWindow(editor);
-		subWindow->setWindowState(Qt::WindowMaximized);		
-		subWindow->setWindowTitle("Manual IBI-signal definition window");
-		subWindow->show();
-	}
-}
-
-void AIECG::openTextWindow()
-{
-	if (windowListWidget->currentRow() == 4)
-	{
-		editor = new Editor;
-		editor->newFile();
-		subWindow = mdiArea->addSubWindow(editor);
-		subWindow->setWindowState(Qt::WindowMaximized);		
-		subWindow->setWindowTitle("Text window");
-		subWindow->show();
-	}
-}
-
-void AIECG::loadText()
-{
-	QString fileName = QFileDialog::getOpenFileName(this, tr("Load Text"), QString(),
-		tr("Ascii file(*.*);;Text file(*.txt);;Macro file(*.dpm);;Macro list file(*.dpl)"));
-
-	if (!fileName.isEmpty())
-	{
-		QFile file(fileName);
-		if (!file.open(QIODevice::ReadOnly))
-		{
-			QMessageBox::critical(this,tr("ERROR"),tr("couldn't open the file"));
-			return;
-		} 
-		else
-		{
-			QTextStream stream(&file);
-			editor = new Editor;
-			editor->newFile();
-			editor->setText(stream.readAll());
-			subWindow = mdiArea->addSubWindow(editor);
-			subWindow->setWindowState(Qt::WindowMaximized);	
-			
-			file.flush();
-		}
-	}
-	else
-	{
-		QMessageBox::critical(this,tr("ERROR"),tr("you don't open any file"));
-	}
-}
-
-void AIECG::print()
-{
-	QPrinter printer; //构建新对象
-	QPrintDialog printDialog(&printer, this);
-
-	if (printDialog.exec()) //用于判断用户是否点击“打印”按钮
-	{
-		QPainter painter(&printer);
-		QRect rect = painter.viewport(); //获取QPainter对象的矩形区域
-		QSize size = image.size(); //获取图片的大小
-		size.scale(rect.size(), Qt::KeepAspectRatio);//按照图形比例大小重新设置视口矩形区域
-
-		//打印
-		painter.setViewport(rect.x(), rect.y(), size.width(), size.height());
-		painter.setWindow(image.rect());
-		painter.drawImage(0, 0, image);
-	}
-}
-
-void AIECG::printPreview()
-{
-	QPrinter printer;
-	QPrintPreviewDialog previewDialog(&printer, this);
-
-	connect(&previewDialog, SIGNAL(paintRequested(QPrinter*)), this, SLOT(printDocument(QPrinter*)));
-
-	previewDialog.exec();
-}
-
-void AIECG::printDocument(QPrinter *printer)
-{
-	textEdit->print(printer); 
-}
-
-void AIECG::setUpPage()
-{
-	QPrinter printer;
-	QPageSetupDialog pageSetUpDialog(&printer, this);
-	if (pageSetUpDialog.exec() == QDialog::Accepted)
-	{
-		printer.setOrientation(QPrinter::Landscape);
-	} 
-	else
-	{
-		printer.setOrientation(QPrinter::Portrait);
-	}
-}
-
-void AIECG::cut()
-{
-	board = QApplication::clipboard();//获得系统剪贴板对象
-	board->setText("Text from Qt Application");//通过setText()将数据放置到剪贴板
-}
-
-void AIECG::copy()
-{
-	board = QApplication::clipboard();
-	board->setText("Text from Qt Application");
-}
-
-void AIECG::paste()
-{
-	board = QApplication::clipboard();
-	QString str = board->text();//从剪贴板获得数据
-	QMessageBox::information(NULL, "From clipboard", str);
-}
-
-void AIECG::about()
-{
-	QMessageBox::about(this,tr("About AIECG"),
-		tr("<h2>AIECG 1.1</h2>"
-		"<p>Copyright &copy; 2017 Software Inc."
-		"<p>AIECG is a small application that "
-		"demonstrates QAction, QMainWindow, QMenuBar, "
-		"QStatusBar, QToolBar, and many other Qt classes."));
-}
-
-
-void AIECG::beginSVM()
-{
-	pImageProcess->predictSVMs(pReadData);
-}
 AIECG::~AIECG()
 {
 
