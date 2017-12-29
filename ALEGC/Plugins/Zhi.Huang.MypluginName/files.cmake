@@ -6,6 +6,8 @@ set(INTERNAL_CPP_FILES
   mitkPluginActivator.cpp
   QmitkTemplateView.cpp
   qcustomplot.cpp
+  processImage.cpp
+  readdata.cpp
 )
 
 set(UI_FILES
@@ -16,6 +18,8 @@ set(MOC_H_FILES
   src/internal/mitkPluginActivator.h
   src/internal/QmitkTemplateView.h
   src/internal/qcustomplot.h
+  src/internal/processImage.h
+  src/internal/readdata.h
 )
 
 # list of resource files which can be used by the plug-in
@@ -23,7 +27,7 @@ set(MOC_H_FILES
 # for example the icon used in the menu and tabs for the
 # plug-in views in the workbench
 set(CACHED_RESOURCE_FILES
-  resources/icon.xpm
+  resources/2.jpg
   plugin.xml
 )
 

@@ -1,4 +1,4 @@
-﻿生成启动时间为 2017/12/7 17:06:49。
+﻿生成启动时间为 2017/12/28 13:47:22。
      1>项目“E:\MITK\ALEGCBIN\ZERO_CHECK.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“x64\Release\ZERO_CHECK\ZERO_CHECK.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
@@ -11,4 +11,4 @@
 
 生成成功。
 
-已用时间 00:00:00.13
+已用时间 00:00:00.21

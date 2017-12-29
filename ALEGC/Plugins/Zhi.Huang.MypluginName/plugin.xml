@@ -3,9 +3,9 @@
 
   <extension point="org.blueberry.ui.views">
     <view id="zhi.huang.plugin1"
-          name="MypluginName"
+          name="AIEGC"
           class="MypluginNameUIControl"
-          icon="resources/Image_24.png" />
+          icon="resources/2.jpg" />
   </extension>
 
 </plugin>

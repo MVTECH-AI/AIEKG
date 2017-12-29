@@ -1,6 +1,6 @@
 <!DOCTYPE RCC><RCC version="1.0">
 <qresource prefix="/Zhi.Huang.MypluginName">
-<file>resources/icon.xpm</file>
+<file>resources/2.jpg</file>
 <file>plugin.xml</file>
 </qresource>
 </RCC>

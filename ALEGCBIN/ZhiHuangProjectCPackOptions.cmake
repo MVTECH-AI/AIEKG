@@ -16,7 +16,7 @@ if(CPACK_GENERATOR MATCHES "NSIS")
     )
 
   # tell cpack the executables you want in the start menu as links
-  set(CPACK_PACKAGE_EXECUTABLES "ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application")
+  set(CPACK_PACKAGE_EXECUTABLES "ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application")
      
   # tell cpack to create a desktop link to MainApp
   set(CPACK_CREATE_DESKTOP_LINKS "ZhiHuangApp;ZhiHuangApp")

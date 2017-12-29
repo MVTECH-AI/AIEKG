@@ -22,7 +22,7 @@ static const uint qt_meta_data_MypluginNameUIControl[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       9,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,14 +32,22 @@ static const uint qt_meta_data_MypluginNameUIControl[] = {
  // slots: signature, parameters, type, tag, flags
       23,   22,   22,   22, 0x09,
       43,   22,   22,   22, 0x09,
-      57,   22,   22,   22, 0x0a,
+      57,   22,   22,   22, 0x09,
+      66,   22,   22,   22, 0x09,
+      77,   22,   22,   22, 0x09,
+      88,   22,   22,   22, 0x09,
+      99,   22,   22,   22, 0x09,
+     108,   22,   22,   22, 0x09,
+     120,   22,   22,   22, 0x0a,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_MypluginNameUIControl[] = {
     "MypluginNameUIControl\0\0DoImageProcessing()\0"
-    "Createimage()\0Readdata()\0"
+    "Createimage()\0qwidge()\0qwidge_2()\0"
+    "qwidge_3()\0qwidge_4()\0Delete()\0"
+    "onedelete()\0Readdata()\0"
 };
 
 void MypluginNameUIControl::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -50,7 +58,13 @@ void MypluginNameUIControl::qt_static_metacall(QObject *_o, QMetaObject::Call _c
         switch (_id) {
         case 0: _t->DoImageProcessing(); break;
         case 1: _t->Createimage(); break;
-        case 2: _t->Readdata(); break;
+        case 2: _t->qwidge(); break;
+        case 3: _t->qwidge_2(); break;
+        case 4: _t->qwidge_3(); break;
+        case 5: _t->qwidge_4(); break;
+        case 6: _t->Delete(); break;
+        case 7: _t->onedelete(); break;
+        case 8: _t->Readdata(); break;
         default: ;
         }
     }
@@ -89,9 +103,9 @@ int MypluginNameUIControl::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 9;
     }
     return _id;
 }

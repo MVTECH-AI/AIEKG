@@ -1245,7 +1245,7 @@ MITK_BUILD_ALL_PLUGINS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MITK_BUILD_TESTING
 MITK_BUILD_TESTING-ADVANCED:INTERNAL=1
 //Collecting windows shortcuts to executables
-MITK_CPACK_PACKAGE_EXECUTABLES:INTERNAL=ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application
+MITK_CPACK_PACKAGE_EXECUTABLES:INTERNAL=ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application;ZhiHuangApp;MITK - ZhiHuangApp Application
 //ADVANCED property for variable: MITK_CTK_DIR
 MITK_CTK_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MITK_DCMTK_DIR
@@ -1764,11 +1764,11 @@ Q_WS_WIN:INTERNAL=1
 //Have symbol Q_WS_X11
 Q_WS_X11:INTERNAL=
 //Stored GUID
-SG_Filter_== Header Files ==_GUID_CMAKE:INTERNAL=EE71D675-0C6B-4D91-811C-C7D989937262
+SG_Filter_== Header Files ==_GUID_CMAKE:INTERNAL=21EDE087-2436-4A11-B22B-3DE5806761B0
 //Stored GUID
-SG_Filter_== Source Files ==_GUID_CMAKE:INTERNAL=2E380967-806B-408F-A1DC-CB046D6131E7
+SG_Filter_== Source Files ==_GUID_CMAKE:INTERNAL=079F757E-AFD9-499B-9562-37127D1F1649
 //Stored GUID
-SG_Filter_== Template Files ==_GUID_CMAKE:INTERNAL=C1767659-29CA-4D0C-B711-6CEF58E609A7
+SG_Filter_== Template Files ==_GUID_CMAKE:INTERNAL=F8DE9ADD-132F-4F9D-9733-2CD622F3B8A0
 //Stored GUID
 SG_Filter_CMake Rules_GUID_CMAKE:INTERNAL=82849EE2-388E-4BFA-A743-72B997E2426E
 //Stored GUID

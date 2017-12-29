@@ -9,7 +9,6 @@
 
 // Qt
 #include<QMessageBox>
-#include<QString>
 #include<qdebug.h>
 
 
@@ -18,13 +17,19 @@ const std::string MypluginNameUIControl::VIEW_ID = "zhi.huang.plugin1";
 //char * argv[100];
 MypluginNameUIControl::MypluginNameUIControl()//:a(argc, argv)
 {
+		pReadData = new ReadData;
+	pReadData->readtrainingPositiveData();
+	pReadData->readtrainingNegativeData();
+	pReadData->readtestPositiveData();
+	pReadData->readtestNegativeData();
+	//this->predictCounter=-1;
 }
 MypluginNameUIControl::~MypluginNameUIControl()
 {
 }
 void MypluginNameUIControl::SetFocus()
 {
-  m_Controls.buttonPerformImageProcessing->setFocus();
+//  m_Controls.buttonPerformImageProcessing->setFocus();
 }
 
 void MypluginNameUIControl::CreateQtPartControl( QWidget *parent )
@@ -32,24 +37,59 @@ void MypluginNameUIControl::CreateQtPartControl( QWidget *parent )
   // create GUI widgets from the Qt Designer's .ui file
   m_Controls.setupUi( parent );
   m_Parent=parent;
-  connect( m_Controls.buttonPerformImageProcessing, SIGNAL(clicked()), this, SLOT(DoImageProcessing()) );
-  connect( m_Controls.pushButton, SIGNAL(clicked()), this, SLOT(Createimage()) );
-   connect( m_Controls.pushButton_5, SIGNAL(clicked()), this, SLOT(Readdata()) );
+ // connect( m_Controls.buttonPerformImageProcessing, SIGNAL(clicked()), this, SLOT(DoImageProcessing()) );
+  connect( m_Controls.pushButton_3, SIGNAL(clicked()), this, SLOT(Createimage()) );
+  connect( m_Controls.pushButton_4, SIGNAL(clicked()), this, SLOT(onedelete()) );
+  connect( m_Controls.toolButton, SIGNAL(clicked()), this, SLOT(Readdata()) );
+  connect( m_Controls.pushButton_7, SIGNAL(clicked()), this, SLOT(qwidge()) );
+  connect( m_Controls.pushButton_8, SIGNAL(clicked()), this, SLOT(qwidge_3()) );
+  connect( m_Controls.toolButton_2, SIGNAL(clicked()), this, SLOT(qwidge_3()) );
+  connect( m_Controls.pushButton_9, SIGNAL(clicked()), this, SLOT(qwidge_2()) );
+  connect( m_Controls.pushButton_10, SIGNAL(clicked()), this, SLOT(qwidge_4()) );
+  connect( m_Controls.toolButton_3, SIGNAL(clicked()), this, SLOT(Delete()) );
 }
-
-
+void MypluginNameUIControl::qwidge()
+{
+	m_Controls.tabWidget->setCurrentIndex(1);
+}
+void MypluginNameUIControl::qwidge_2()
+{
+	m_Controls.tabWidget->setCurrentIndex(2);
+}
+void MypluginNameUIControl::qwidge_3()
+{
+	m_Controls.tabWidget->setCurrentIndex(3);
+}
+void MypluginNameUIControl::qwidge_4()
+{
+	m_Controls.tabWidget->setCurrentIndex(4);
+}
+void MypluginNameUIControl::Delete()
+{
+	m_Controls.Delete();
+	//m_Controls.pushButton_8->setVisible( false );
+}
+void MypluginNameUIControl::onedelete()
+{
+	m_Controls.pushButton_3->setVisible( false );
+	m_Controls.pushButton_4->setVisible( false );
+	m_Controls.label_2->setVisible(true);
+}
 void MypluginNameUIControl::Readdata()//data import
 {
 
-	QString fileFull, fileName, filePath;  
+	QString fileFull, fileName, filePath,patientName;  
 	QFileInfo fi;
 	// for read 
 	fileFull = QFileDialog::getOpenFileName();  
-	fi = QFileInfo(fileFull);  
+	fi = QFileInfo(fileFull); 
+	realMat=cvCreateMat(1,60000,CV_32FC1);
+	patientName=fi.completeBaseName()+".row";
 	fileName = fi.fileName();  
 	filePath = fi.absolutePath();
+	realDataName=fi.completeBaseName() + ".txt";
+	//qDebug("readString= %s",qPrintable(realDataName));
 	status = readRawLeadData(fileFull.toStdString().c_str(),drawData,strMsg);
-	std::cout<<status<<endl;
 	if (status == 0)
 	{}
 	else if(status == -1) {
@@ -60,89 +100,35 @@ void MypluginNameUIControl::Readdata()//data import
 		QMessageBox::information(NULL,"Memory Error","Retry or not",QMessageBox::Yes|QMessageBox::No,QMessageBox::Yes);
 		return;
 	}
+	pImageProcess = new ImageProcess;
+	pImageProcess->doPCA(pReadData);
+	pImageProcess->trainSVMs(pReadData);
+	pImageProcess->testSVMs(pReadData);
+	m_Controls.create(pImageProcess->predictSVMs(pReadData,realDataName,realMat),patientName);
+	m_Controls.pushButton_3->setVisible( true );
+	m_Controls.pushButton_4->setVisible( true );
+	m_Controls.label_2->setVisible(false);
 }
-// the given image is transformed into a row matrix
-Mat MypluginNameUIControl::asRowMatrix( vector<Mat>& src, int rtype, double alpha = 1, double beta = 0)
-{
-	// number of samples
-	size_t n = src.size();
 
-	// if there is no sample, an empty matrix is returned
-	if(n == 0)
-		return Mat();
 
-	// the dimension of the sample
-	size_t d = src[0].total();
-	// copy data
-	Mat data(n, d, rtype);
-
-	for(int i = 0; i < n; i++)
-	{
-
-		if(src[i].empty()) 
-		{
-			string error_message = format("Image number %d was empty, please check your input data.", i);
-			CV_Error(CV_StsBadArg, error_message);
-		}
-		// make sure the data can be reshape
-		if(src[i].total() != d) 
-		{
-			string error_message = format("Wrong number of elements in matrix #%d! Expected %d was %d.", i, d, src[i].total());
-			CV_Error(CV_StsBadArg, error_message);
-		}
-		Mat xi = data.row(i);
-		// converted into 1 row, n column format
-		if(src[i].isContinuous())
-		{
-			src[i].reshape(1, 1).convertTo(xi, rtype, alpha, beta);
-		} else {
-			src[i].clone().reshape(1, 1).convertTo(xi, rtype, alpha, beta);
-		}
-	}
-	return data;
-}
-void MypluginNameUIControl::predictSVMs(MypluginNameUIControl *pst)
-{
-	CvSVM svm;
-	svm.clear();
-	string modelpath = "svmModel.xml";
-	FileStorage svmFile(modelpath,FileStorage::READ);
-	if(svmFile.isOpened()){
-		svm.load(modelpath.c_str()); 
-	}
-
-	vector<Mat> pcaRealMat = pst->realMat;
-	realpredictData = asRowMatrix(pcaRealMat,CV_32FC1);
-	PCA pca(realpredictData, Mat(), CV_PCA_DATA_AS_ROW, num_components);
-
-	//qDebug() << realpredictData.rows << realpredictData.cols ;
-	// 1 row, 60000 cols
-
-	realpredictDstMat = pca.project(realpredictData);
-	realpredictDst = pca.backProject(realpredictDstMat);
-	ofstream writeData("EKG.txt");
-	 if (svm.predict(Mat(realpredictDst.row(0))) == 1){
-		 qDebug() << 1;
-			auto *p = pst->realMat[0].ptr<float>(0);
-			for (int j = 0;j < 60000;j++,p++){
-				writeData << *p << " ";
-			}
-			writeData << "\n";
-		}
-	writeData.close();
-	//qDebug() << svm.predict(Mat(projectedMat.row(0)));
-}
 void MypluginNameUIControl::Createimage()//do ECG imaging
 {
+//	predictCounter +=1;
     realData.push_back(drawData);
 	//return;
-	realMat.push_back(cvCreateMat(1,60000,CV_32FC1));
-	auto *p = realMat[0].ptr<float>(0);
-	for (int j=0;j<60000;j++,p++,realData[0]++){
-			*p = *realData[0];			
+	//realMat.push_back(cvCreateMat(1,60000,CV_32FC1));
+	realMat=cvCreateMat(1,60000,CV_32FC1);
+	//auto *p = realMat[predictCounter].ptr<float>(0);
+	auto *p = realMat.ptr<float>(0);
+	/*for (int j=0;j<60000;j++,p++,realData[predictCounter]++){
+			*p = *realData[predictCounter];			
 			//qDebug() << *p  <<  " ";
 		}
-
+		*/
+		for (int j = 0;j < 60000;j++,p++){
+			*p = drawData[j];			
+			//qDebug() << *p  <<  " ";
+		}
 	// for drawing the EKG	
 	QVector<double>yData(60000);
 	QVector<double>xData(60000);
@@ -158,15 +144,31 @@ void MypluginNameUIControl::Createimage()//do ECG imaging
 		}
 
 	}
-	QCustomPlot *Plot = new QCustomPlot;
-	Plot->addGraph();
-	Plot->graph(0)->setData(xData,yData);
+		QCustomPlot *Plot = new QCustomPlot;
+	for(int i =0; i < 12; i++){
+		Plot->addGraph();			
+		Plot->graph(i)->setLineStyle(QCPGraph::lsLine); 
+		QVector<double> X(5000);
+		QVector<double> Y(5000);
+		for (int j = 0;j<5000;j++){
+			X[j] = xData[j+5000*i]-10*i;
+			Y[j] = yData[j+5000*i]-2000*i+6000;
+		}
+		Plot->graph(i)->setPen(QPen(Qt::black));
+		Plot->graph(i)->addData(X,Y);
+	
+	}
 	Plot->xAxis->setLabel("X");
-	Plot->yAxis->setLabel("Y");
-	Plot->xAxis->setRange(0,100);
-	Plot->yAxis->setRange(-1000,1000);
-	Plot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom);
+	Plot->legend->setVisible(true);
+	Plot->xAxis->setRange(0,20);
+	Plot->yAxis->setRange(-16500,6500);
+	Plot->setAutoAddPlottableToLegend(true);
+	Plot->setInteractions( QCP::iRangeZoom | QCP::iRangeDrag);
+	Plot->setWindowFlags(Qt::Window | Qt::WindowMinimizeButtonHint | Qt::WindowMaximizeButtonHint);
+	//Plot->setWindowTitle(tr("EKG"));
+	Plot->resize(1366,768);
 	Plot->show();
+	
 }
 void MypluginNameUIControl::OnSelectionChanged( berry::IWorkbenchPart::Pointer /*source*/,
                                              const QList<mitk::DataNode::Pointer>& nodes )
@@ -176,16 +178,19 @@ void MypluginNameUIControl::OnSelectionChanged( berry::IWorkbenchPart::Pointer /
   {
     if( node.IsNotNull() && dynamic_cast<mitk::Image*>(node->GetData()) )
     {
-      m_Controls.labelWarning->setVisible( false );
-      m_Controls.buttonPerformImageProcessing->setEnabled( true );
+//      m_Controls.labelWarning->setVisible( false );
+//      m_Controls.buttonPerformImageProcessing->setEnabled( true );
       return;
     }
   }
 
-  m_Controls.labelWarning->setVisible( true );
-  m_Controls.buttonPerformImageProcessing->setEnabled( false );
+//  m_Controls.labelWarning->setVisible( true );
+ // m_Controls.buttonPerformImageProcessing->setEnabled( false );
 }
-
+/*int MypluginNameUIControl::getCounter()
+{
+  return predictCounter;
+}*/
 
 void MypluginNameUIControl::DoImageProcessing()
 {

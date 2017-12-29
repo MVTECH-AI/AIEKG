@@ -10,6 +10,12 @@
     <ClCompile Include="..\..\..\ALEGC\Plugins\Zhi.Huang.MypluginName\src\internal\qcustomplot.cpp">
       <Filter>== Source Files ==</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\ALEGC\Plugins\Zhi.Huang.MypluginName\src\internal\processImage.cpp">
+      <Filter>== Source Files ==</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ALEGC\Plugins\Zhi.Huang.MypluginName\src\internal\readdata.cpp">
+      <Filter>== Source Files ==</Filter>
+    </ClCompile>
     <ClCompile Include="src\internal\moc_mitkPluginActivator.cxx">
       <Filter>Generated</Filter>
     </ClCompile>
@@ -17,6 +23,12 @@
       <Filter>Generated</Filter>
     </ClCompile>
     <ClCompile Include="src\internal\moc_qcustomplot.cxx">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="src\internal\moc_processImage.cxx">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="src\internal\moc_readdata.cxx">
       <Filter>Generated</Filter>
     </ClCompile>
     <ClCompile Include="qrc_Zhi_Huang_MypluginName_manifest.cxx">
@@ -42,6 +54,12 @@
     <CustomBuild Include="..\..\CMakeFiles\425c3044d768b3939d721e2a4f0561dc\moc_qcustomplot.cxx.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
+    <CustomBuild Include="..\..\CMakeFiles\425c3044d768b3939d721e2a4f0561dc\moc_processImage.cxx.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\CMakeFiles\425c3044d768b3939d721e2a4f0561dc\moc_readdata.cxx.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
     <CustomBuild Include="..\..\..\ALEGC\Plugins\Zhi.Huang.MypluginName\src\internal\QmitkTemplateViewControls.ui">
       <Filter>QT UI Files</Filter>
     </CustomBuild>
@@ -56,7 +74,7 @@
       <UniqueIdentifier>{15AC7753-C7FD-49AE-917E-D60E087AF6AA}</UniqueIdentifier>
     </Filter>
     <Filter Include="== Source Files ==">
-      <UniqueIdentifier>{2E380967-806B-408F-A1DC-CB046D6131E7}</UniqueIdentifier>
+      <UniqueIdentifier>{079F757E-AFD9-499B-9562-37127D1F1649}</UniqueIdentifier>
     </Filter>
     <Filter Include="QT UI Files">
       <UniqueIdentifier>{2FCCAF24-AA0D-4E4F-B8FC-25FAF50AE3C7}</UniqueIdentifier>

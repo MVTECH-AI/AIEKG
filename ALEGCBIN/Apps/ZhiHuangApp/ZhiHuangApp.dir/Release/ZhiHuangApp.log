@@ -1,19 +1,25 @@
-﻿生成启动时间为 2017/12/7 10:57:37。
-     1>项目“E:\MITK\ALEGCBIN\Apps\ZhiHuangApp\ZhiHuangApp.vcxproj”在节点 2 上(build 个目标)。
-     1>InitializeBuildStatus:
+﻿生成启动时间为 2017/12/11 16:19:20。
+     1>项目“E:\MITK\ALEGCBIN\Apps\ZhiHuangApp\ZhiHuangApp.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“ZhiHuangApp.dir\Release\ZhiHuangApp.lastbuildstate”。
+       InitializeBuildStatus:
          正在创建“ZhiHuangApp.dir\Release\ZhiHuangApp.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        CustomBuild:
-         所有输出均为最新。
+         Building Custom Rule E:/MITK/ALEGC/Apps/ZhiHuangApp/CMakeLists.txt
+         CMake does not need to re-run because E:\MITK\ALEGCBIN\Apps\ZhiHuangApp\CMakeFiles\generate.stamp is up-to-date.
        ClCompile:
-         所有输出均为最新。
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" /I"C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" /I"C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" /IC:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src /IC:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\application /IC:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\event /IC:\MITK\src\BlueBerry\Bundles\org.blueberry.osgi\src\service /I"C:\MITK\bin\MITK-build\BlueBerry\Bundles\org.blueberry.osgi" /I"C:\MITK\bin\CTK-build\CTK-build" /I"C:\MITK\bin\CTK-src\Libs\PluginFramework" /I"C:\MITK\bin\CTK-build\CTK-build\Libs\PluginFramework" /I"C:\MITK\bin\CTK-src\Libs\Core" /I"C:\MITK\bin\CTK-build\CTK-build\Libs\Core" /I"C:\MITK\bin\Poco-install\include" /IC:\MITK\src\Utilities\mbilog /I"C:\MITK\bin\MITK-build\Utilities\mbilog" /nologo /W3 /WX- /O2 /Ob2 /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0501 /D POCO_NO_UNWINDOWS /D WIN32_LEAN_AND_MEAN /D NDEBUG /D POCO_NO_UNWINDOWS /D WIN32_LEAN_AND_MEAN /D QWT_DLL /D QT_DLL /D QT_NO_DEBUG /D QT_GUI_LIB /D QT_CORE_LIB /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"ZhiHuangApp.dir\Release\\" /Fd"ZhiHuangApp.dir\Release\vc100.pdb" /Gd /TP /wd4231 /errorReport:prompt ..\..\..\ALEGC\Apps\ZhiHuangApp\ZhiHuangApp.cpp
+         ZhiHuangApp.cpp
        Link:
-         所有输出均为最新。
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"E:\MITK\ALEGCBIN\bin\Release\ZhiHuangApp.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:/MITK/bin/MITK-build/bin" /LIBPATH:"C:/MITK/bin/MITK-build/bin/Release" /LIBPATH:"C:/MITK/bin/OpenCV-build/lib/Debug" /LIBPATH:"C:/MITK/bin/OpenCV-build/lib/Debug/Release" /LIBPATH:"C:/MITK/bin/OpenCV-build/3rdparty/lib/Debug" /LIBPATH:"C:/MITK/bin/OpenCV-build/3rdparty/lib/Debug/Release" /LIBPATH:"C:/MITK/bin/VTK-build/bin" /LIBPATH:"C:/MITK/bin/VTK-build/bin/Release" /LIBPATH:"C:/MITK/bin/GDCM-build/bin/Release" /LIBPATH:"C:/MITK/bin/GDCM-build/bin/Release/Release" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\MITK\bin\MITK-build\bin\plugins\Release\org_blueberry_osgi.lib" "C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtCore4.lib" "C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\qtmain.lib" "C:\MITK\bin\CTK-build\CTK-build\bin\Release\CTKPluginFramework.lib" "C:\MITK\bin\CTK-build\CTK-build\bin\Release\CTKCore.lib" "C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtOpenGL4.lib" "C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtXmlPatterns4.lib" "C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtGui4.lib" "C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtXml4.lib" "C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtSql4.lib" "C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtNetwork4.lib" "C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtCore4.lib" dbghelp.lib mbilog.lib "C:\MITK\bin\Poco-install\lib\PocoFoundation.lib" "C:\MITK\bin\Poco-install\lib\PocoUtil.lib" "C:\MITK\bin\Poco-install\lib\PocoXML.lib" /MANIFEST /ManifestFile:"ZhiHuangApp.dir\Release\ZhiHuangApp.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"E:/MITK/ALEGCBIN/bin/Release/ZhiHuangApp.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:/MITK/ALEGCBIN/bin/Release/ZhiHuangApp.lib" /MACHINE:X64 ZhiHuangApp.dir\Release\ZhiHuangApp.obj  /machine:x64 
          ZhiHuangApp.vcxproj -> E:\MITK\ALEGCBIN\bin\Release\ZhiHuangApp.exe
+       Manifest:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\MITK\ALEGCBIN\bin\Release\ZhiHuangApp.exe;#1" /manifest ZhiHuangApp.dir\Release\ZhiHuangApp.exe.intermediate.manifest
        FinalizeBuildStatus:
          正在删除文件“ZhiHuangApp.dir\Release\ZhiHuangApp.unsuccessfulbuild”。
          正在对“ZhiHuangApp.dir\Release\ZhiHuangApp.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“E:\MITK\ALEGCBIN\Apps\ZhiHuangApp\ZhiHuangApp.vcxproj”(build 个目标)的操作。
+     1>已完成生成项目“E:\MITK\ALEGCBIN\Apps\ZhiHuangApp\ZhiHuangApp.vcxproj”(rebuild 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:00.40
+已用时间 00:00:02.21
