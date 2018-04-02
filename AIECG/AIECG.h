@@ -56,6 +56,8 @@ private slots:
 
 	void loadSignals();
 	void loadText();
+	void saveSignal();
+	void saveText();
 	void beginSVM();
 
 private:

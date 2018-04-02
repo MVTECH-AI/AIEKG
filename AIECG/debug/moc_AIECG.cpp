@@ -22,7 +22,7 @@ static const uint qt_meta_data_AIECG[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      17,   14, // methods
+      19,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -47,6 +47,8 @@ static const uint qt_meta_data_AIECG[] = {
      219,    6,    6,    6, 0x08,
      233,    6,    6,    6, 0x08,
      244,    6,    6,    6, 0x08,
+     257,    6,    6,    6, 0x08,
+     268,    6,    6,    6, 0x08,
 
        0        // eod
 };
@@ -58,7 +60,8 @@ static const char qt_meta_stringdata_AIECG[] = {
     "about()\0openChannelWidnow()\0"
     "openPlotSignalWindow()\0openGridSignalWindow()\0"
     "openIBISignalWindow()\0openTextWindow()\0"
-    "loadSignals()\0loadText()\0beginSVM()\0"
+    "loadSignals()\0loadText()\0saveSignal()\0"
+    "saveText()\0beginSVM()\0"
 };
 
 void AIECG::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -83,7 +86,9 @@ void AIECG::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         case 13: _t->openTextWindow(); break;
         case 14: _t->loadSignals(); break;
         case 15: _t->loadText(); break;
-        case 16: _t->beginSVM(); break;
+        case 16: _t->saveSignal(); break;
+        case 17: _t->saveText(); break;
+        case 18: _t->beginSVM(); break;
         default: ;
         }
     }
@@ -121,9 +126,9 @@ int AIECG::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 17)
+        if (_id < 19)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 17;
+        _id -= 19;
     }
     return _id;
 }

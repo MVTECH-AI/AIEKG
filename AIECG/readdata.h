@@ -20,6 +20,7 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <iostream>
+#include "readcsvdata.h"
 #pragma comment(lib,"SCRawReader.lib")
 using namespace cv;
 using namespace std;
@@ -38,10 +39,10 @@ public:
 	vector<Mat> testMat;
 	//vector<Mat> realMat;
 	Mat realMat;
-	void readtrainingPositiveData();
-	void readtrainingNegativeData();
-	void readtestPositiveData();
-	void readtestNegativeData();
+	void TrainAbnormalData();
+	void TrainNormalData();
+	void TestAbnormalData();
+	void TestNormalData();
 	QString getDataName();
 	int ptrianSize();
 	int ntrainSize();
@@ -50,11 +51,13 @@ public:
 	int getStatus();
 	int getCounter();
 	void readData();
+
 private:
 	vector<string> filepath;
 	//vector<string> realfilepath;
 	short MyData[RAWDATALEN*12];
 	short drawData[RAWDATALEN*12];
+	float csvData[60000];
 
 	vector<short *> srcData;
 	vector<short *> testData;
@@ -63,20 +66,14 @@ private:
 	char strMsg[255];
 	vector<int> result;
 	int status;
-	int trainPositiveSize;
-	int trainNegativeSize;
-	int testPositiveSize;
-	int testNegativeSize;
+	int trainAbnormalSize;
+	int trainNormalSize;
+	int testAbnormalSize;
+	int testNormalSize;
 	int testSize;
 	int trainSize;
 	int predictCounter;
-
-
-
-private slots:
-	void loadSignal();
-	//void loadSignals();
-	void saveSignal();
-
+	ReadCsvData *readcsvdata;
 };
+
 #endif // READDATA_H

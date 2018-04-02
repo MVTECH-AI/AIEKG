@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
@@ -16,7 +16,7 @@
     <Keyword>Qt4VSv1.0</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <OutputDirectory>debug\</OutputDirectory>
     <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
     <CharacterSet>NotSet</CharacterSet>
@@ -24,7 +24,7 @@
     <IntermediateDirectory>debug\</IntermediateDirectory>
     <PrimaryOutput>AIECG</PrimaryOutput>
   </PropertyGroup>
-  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <OutputDirectory>release\</OutputDirectory>
     <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
     <CharacterSet>NotSet</CharacterSet>
@@ -34,27 +34,27 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings" />
-  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
   </ImportGroup>
-  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">debug\</OutDir>
-    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">debug\</IntDir>
-    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">AIECG</TargetName>
-    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</IgnoreImportLibrary>
-    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">release\</OutDir>
-    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">release\</IntDir>
-    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">AIECG</TargetName>
-    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</IgnoreImportLibrary>
-    <LinkIncremental Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AIECG</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AIECG</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore&quot;;&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtNetwork&quot;;&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui&quot;;&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include&quot;;&quot;.&quot;;&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt&quot;;&quot;debug&quot;;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore";"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui";"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include";".";"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt";"debug";..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>debug\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -62,7 +62,7 @@
       <ExceptionHandling>Sync</ExceptionHandling>
       <ObjectFileName>debug\</ObjectFileName>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_DLL;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessToFile>false</PreprocessToFile>
       <ProgramDataBaseFileName>.\</ProgramDataBaseFileName>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -72,9 +72,9 @@
       <WarningLevel>Level3</WarningLevel>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\qtmaind.lib;c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtGuid4.lib;c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtNetworkd4.lib;c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtCored4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\qtmaind.lib;c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtGuid4.lib;c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtCored4.lib;c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtNetworkd4.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot; %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreImportLibrary>true</IgnoreImportLibrary>
@@ -89,19 +89,19 @@
       <WarningLevel>0</WarningLevel>
     </Midl>
     <ResourceCompile>
-      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_DLL;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore&quot;;&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtNetwork&quot;;&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui&quot;;&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include&quot;;&quot;.&quot;;&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt&quot;;&quot;release&quot;;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore";"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui";"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include";".";"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt";"release";..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>release\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <ObjectFileName>release\</ObjectFileName>
       <Optimization>MaxSpeed</Optimization>
-      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_DLL;QT_NO_DEBUG;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_DLL;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessToFile>false</PreprocessToFile>
       <ProgramDataBaseFileName>.\</ProgramDataBaseFileName>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -111,9 +111,9 @@
       <WarningLevel>Level3</WarningLevel>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\qtmain.lib;c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtGui4.lib;c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtNetwork4.lib;c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtCore4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\qtmain.lib;c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtGui4.lib;c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtCore4.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot; %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreImportLibrary>true</IgnoreImportLibrary>
@@ -129,7 +129,7 @@
       <WarningLevel>0</WarningLevel>
     </Midl>
     <ResourceCompile>
-      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_DLL;QT_NO_DEBUG;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_DLL;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -140,157 +140,174 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="processImage.cpp" />
     <ClCompile Include="qcustomplot.cpp" />
+    <ClCompile Include="readcsvdata.cpp" />
     <ClCompile Include="readdata.cpp" />
     <ClCompile Include="respiredialog.cpp" />
     <ClCompile Include="serialdialog.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="AIECG.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">AIECG.h;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtNetwork&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include&quot; -I&quot;.&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt&quot; -I&quot;debug&quot; -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 AIECG.h -o debug\moc_AIECG.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">MOC AIECG.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">debug\moc_AIECG.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">AIECG.h;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtNetwork&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include&quot; -I&quot;.&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt&quot; -I&quot;release&quot; -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 AIECG.h -o release\moc_AIECG.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">MOC AIECG.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">release\moc_AIECG.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AIECG.h;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" -I"." -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" -I"debug" -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 AIECG.h -o debug\moc_AIECG.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC AIECG.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_AIECG.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AIECG.h;C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" -I"." -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" -I"release" -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 AIECG.h -o release\moc_AIECG.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC AIECG.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_AIECG.cpp;%(Outputs)</Outputs>
     </CustomBuild>
     <ClInclude Include="SCRawReader.h" />
     <CustomBuild Include="dataAcquisitiondialog.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;dataAcquisitiondialog.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtNetwork&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include&quot; -I&quot;.&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt&quot; -I&quot;debug&quot; -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 dataAcquisitiondialog.h -o debug\moc_dataAcquisitiondialog.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">MOC dataAcquisitiondialog.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">debug\moc_dataAcquisitiondialog.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;dataAcquisitiondialog.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtNetwork&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include&quot; -I&quot;.&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt&quot; -I&quot;release&quot; -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 dataAcquisitiondialog.h -o release\moc_dataAcquisitiondialog.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">MOC dataAcquisitiondialog.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">release\moc_dataAcquisitiondialog.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;dataAcquisitiondialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" -I"." -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" -I"debug" -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 dataAcquisitiondialog.h -o debug\moc_dataAcquisitiondialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC dataAcquisitiondialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_dataAcquisitiondialog.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;dataAcquisitiondialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" -I"." -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" -I"release" -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 dataAcquisitiondialog.h -o release\moc_dataAcquisitiondialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC dataAcquisitiondialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_dataAcquisitiondialog.cpp;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="display.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;display.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtNetwork&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include&quot; -I&quot;.&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt&quot; -I&quot;debug&quot; -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 display.h -o debug\moc_display.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">MOC display.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">debug\moc_display.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;display.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtNetwork&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include&quot; -I&quot;.&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt&quot; -I&quot;release&quot; -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 display.h -o release\moc_display.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">MOC display.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">release\moc_display.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;display.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" -I"." -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" -I"debug" -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 display.h -o debug\moc_display.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC display.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_display.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;display.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" -I"." -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" -I"release" -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 display.h -o release\moc_display.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC display.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_display.cpp;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="editor.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;editor.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtNetwork&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include&quot; -I&quot;.&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt&quot; -I&quot;debug&quot; -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 editor.h -o debug\moc_editor.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">MOC editor.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">debug\moc_editor.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;editor.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtNetwork&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include&quot; -I&quot;.&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt&quot; -I&quot;release&quot; -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 editor.h -o release\moc_editor.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">MOC editor.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">release\moc_editor.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;editor.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" -I"." -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" -I"debug" -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 editor.h -o debug\moc_editor.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC editor.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_editor.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;editor.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" -I"." -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" -I"release" -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 editor.h -o release\moc_editor.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC editor.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_editor.cpp;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="processImage.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;processImage.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtNetwork&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include&quot; -I&quot;.&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt&quot; -I&quot;debug&quot; -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 processImage.h -o debug\moc_processImage.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">MOC processImage.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">debug\moc_processImage.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;processImage.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtNetwork&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include&quot; -I&quot;.&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt&quot; -I&quot;release&quot; -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 processImage.h -o release\moc_processImage.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">MOC processImage.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">release\moc_processImage.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;processImage.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" -I"." -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" -I"debug" -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 processImage.h -o debug\moc_processImage.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC processImage.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_processImage.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;processImage.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" -I"." -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" -I"release" -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 processImage.h -o release\moc_processImage.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC processImage.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_processImage.cpp;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="qcustomplot.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;qcustomplot.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtNetwork&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include&quot; -I&quot;.&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt&quot; -I&quot;debug&quot; -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 qcustomplot.h -o debug\moc_qcustomplot.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">MOC qcustomplot.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">debug\moc_qcustomplot.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;qcustomplot.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtNetwork&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include&quot; -I&quot;.&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt&quot; -I&quot;release&quot; -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 qcustomplot.h -o release\moc_qcustomplot.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">MOC qcustomplot.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">release\moc_qcustomplot.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;qcustomplot.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" -I"." -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" -I"debug" -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 qcustomplot.h -o debug\moc_qcustomplot.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC qcustomplot.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_qcustomplot.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;qcustomplot.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" -I"." -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" -I"release" -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 qcustomplot.h -o release\moc_qcustomplot.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC qcustomplot.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_qcustomplot.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="readcsvdata.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;readcsvdata.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" -I"." -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" -I"debug" -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 readcsvdata.h -o debug\moc_readcsvdata.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC readcsvdata.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_readcsvdata.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;readcsvdata.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" -I"." -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" -I"release" -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 readcsvdata.h -o release\moc_readcsvdata.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC readcsvdata.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_readcsvdata.cpp;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="readdata.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;readdata.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtNetwork&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include&quot; -I&quot;.&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt&quot; -I&quot;debug&quot; -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 readdata.h -o debug\moc_readdata.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">MOC readdata.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">debug\moc_readdata.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;readdata.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtNetwork&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include&quot; -I&quot;.&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt&quot; -I&quot;release&quot; -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 readdata.h -o release\moc_readdata.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">MOC readdata.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">release\moc_readdata.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;readdata.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" -I"." -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" -I"debug" -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 readdata.h -o debug\moc_readdata.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC readdata.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_readdata.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;readdata.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" -I"." -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" -I"release" -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 readdata.h -o release\moc_readdata.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC readdata.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_readdata.cpp;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="respiredialog.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;respiredialog.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtNetwork&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include&quot; -I&quot;.&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt&quot; -I&quot;debug&quot; -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 respiredialog.h -o debug\moc_respiredialog.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">MOC respiredialog.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">debug\moc_respiredialog.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;respiredialog.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtNetwork&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include&quot; -I&quot;.&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt&quot; -I&quot;release&quot; -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 respiredialog.h -o release\moc_respiredialog.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">MOC respiredialog.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">release\moc_respiredialog.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;respiredialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" -I"." -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" -I"debug" -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 respiredialog.h -o debug\moc_respiredialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC respiredialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_respiredialog.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;respiredialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" -I"." -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" -I"release" -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 respiredialog.h -o release\moc_respiredialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC respiredialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_respiredialog.cpp;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="serialdialog.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;serialdialog.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtNetwork&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include&quot; -I&quot;.&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt&quot; -I&quot;debug&quot; -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 serialdialog.h -o debug\moc_serialdialog.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">MOC serialdialog.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">debug\moc_serialdialog.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;serialdialog.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtNetwork&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include&quot; -I&quot;.&quot; -I&quot;..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt&quot; -I&quot;release&quot; -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 serialdialog.h -o release\moc_serialdialog.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">MOC serialdialog.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">release\moc_serialdialog.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;serialdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" -I"." -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" -I"debug" -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 serialdialog.h -o debug\moc_serialdialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC serialdialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_serialdialog.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe;serialdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\bin\moc.exe  -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" -I"." -I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" -I"release" -I..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default -D_MSC_VER=1600 -DWIN32 serialdialog.h -o release\moc_serialdialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC serialdialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_serialdialog.cpp;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="debug\moc_AIECG.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="release\moc_AIECG.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="debug\moc_dataAcquisitiondialog.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="release\moc_dataAcquisitiondialog.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="debug\moc_display.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="release\moc_display.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="debug\moc_editor.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="release\moc_editor.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="debug\moc_processImage.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="release\moc_processImage.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="debug\moc_qcustomplot.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="release\moc_qcustomplot.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_readcsvdata.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_readcsvdata.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="debug\moc_readdata.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="release\moc_readdata.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="debug\moc_respiredialog.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="release\moc_respiredialog.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="debug\moc_serialdialog.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="release\moc_serialdialog.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

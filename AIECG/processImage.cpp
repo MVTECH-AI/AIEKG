@@ -70,7 +70,7 @@ void ImageProcess::doPCA( ReadData *pst)
 	// project the raw data, the dst contains all principal components
 	pcaDstMat = pca.project(pcaData);
 	//matSize = pcaDstMat.rows;
-	//qDebug() << pcaDstMat.rows << pcaDstMat.cols << endl;
+	//qDebug() << pcaDstMat.rows << pcaDstMat.cols << endl
 	//117 rows, 15 cols 
 
 	// back-project to the Mat
@@ -156,7 +156,7 @@ void ImageProcess::testSVMs(ReadData *pst)
 			right++;
 		}
 	}
-	qDebug() << right * 1.0 / testLabels.size() * 100;
+	qDebug() << "Accuracy:" << right * 1.0 / testLabels.size() * 100;
 	//0.8333333
 }
 int ImageProcess::predictSVMs(ReadData *pst)

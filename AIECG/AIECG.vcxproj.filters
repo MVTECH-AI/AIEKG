@@ -48,6 +48,9 @@
     <ClCompile Include="qcustomplot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="readcsvdata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="readdata.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -78,6 +81,9 @@
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="qcustomplot.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="readcsvdata.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="readdata.h">
@@ -125,6 +131,12 @@
       <Filter>Generated Files</Filter>
     </ClCompile>
     <ClCompile Include="release\moc_qcustomplot.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_readcsvdata.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_readcsvdata.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
     <ClCompile Include="debug\moc_readdata.cpp">

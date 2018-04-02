@@ -8,10 +8,10 @@ AIECG::AIECG(QWidget *parent)
 {
 
 	pReadData = new ReadData;
-	pReadData->readtrainingPositiveData();
-	pReadData->readtrainingNegativeData();
-	pReadData->readtestPositiveData();
-	pReadData->readtestNegativeData();
+	pReadData->TrainAbnormalData();
+	pReadData->TrainNormalData();
+	pReadData->TestAbnormalData();
+	pReadData->TestNormalData();
 
 	pImageProcess = new ImageProcess;
 	pImageProcess->doPCA(pReadData);
@@ -279,10 +279,29 @@ void AIECG::loadSignals()
 	subWindow->show();
 }
 
+void AIECG::saveSignal()
+{	
+	//pReadData->readData();
+	QString fileName;
+	if(fileName.isEmpty())
+		fileName = QFileDialog::getSaveFileName(this,"Save file");
+	QFile *file=new QFile; 
+	file->setFileName(fileName);
+	bool ok=file->open(QIODevice::WriteOnly | QIODevice::Append); 
+	if(ok) 
+	{ 
+		QTextStream out(file); 
+//		out << fileFull.toStdString().c_str()<<":" << editor->toPlainText() << endl;//这里是取出textEdit当中的纯文本
+
+		file->close(); 
+		delete file; 
+	}
+}
+
 void AIECG::loadText()
 {
 	QString fileName = QFileDialog::getOpenFileName(this, tr("Load Text"), QString(),
-		tr("Ascii file(*.*);;Text file(*.txt);;Macro file(*.dpm);;Macro list file(*.dpl)"));
+		tr("All file(*.*);;Text file(*.txt);;Macro file(*.dpm);;Macro list file(*.dpl)"));
 
 	if (!fileName.isEmpty())
 	{
@@ -310,16 +329,39 @@ void AIECG::loadText()
 	}
 }
 
+void AIECG::saveText()
+{
+	QString fileName = QFileDialog::getSaveFileName(this, tr("Save Text"), QString(),
+		tr("All Files(*.*);;Text Files(*.txt);;c++ Files(*.cpp *.h);;Jsp Files(*.jsp)"));
+
+	if (!fileName.isEmpty())
+	{
+		QFile file(fileName);
+		if (!file.open(QIODevice::WriteOnly))
+		{
+		} 
+		else
+		{
+			QTextStream stream(&file);
+			stream << textEdit->toPlainText();
+			stream.flush();
+			file.close();
+		}
+	}
+}
+
+
+
 void AIECG::beginSVM()
 {
 	result = pImageProcess->predictSVMs(pReadData);
 	if (result == 1)
 	{
-		textEdit->setText("the ECG is abnormal");	
+		textEdit->setText("the ECG is abnormal!");	
 	}
 	else if (result == 0)
 	{
-		textEdit->setText("the ECG is normal");	
+		textEdit->setText("the ECG is normal!");	
 	}
 }
 
@@ -332,7 +374,6 @@ void AIECG::createMenus()
 	fileMenu->addAction(LoadTextAction);
 	fileMenu->addAction(LoadMacrosAction);
 	fileMenu->addAction(LoadWindowAction);
-//	fileMenu->addAction(OpenSerialPortAction);
 	openSubMenu = fileMenu->addMenu(tr("&Open serial port"));
 	openSubMenu->addAction(OpenSerialPortAction);
 	openSubMenu->addAction(OpenRespirationAction);
@@ -465,7 +506,7 @@ void AIECG::createActions()
 
 	LoadMacrosAction = new QAction(tr("&Load macros"), this);
 	LoadMacrosAction->setStatusTip(tr("loads macro source code from the disk and compiles it immediately"));
-
+		
 	LoadWindowAction = new QAction(tr("&Load window"), this);
 	LoadWindowAction->setStatusTip(tr("loads a window file that has previously been saved using Save window from the file menu of the signal window."));
 
@@ -482,7 +523,7 @@ void AIECG::createActions()
 	SaveSignalAction = new QAction(tr("&Save signal"), this);
 	SaveSignalAction->setIcon(QIcon("C:/CppWorkspace/AIECG/images/save.png"));
 	SaveSignalAction->setStatusTip(tr("saves a signal to the disk. "));
-	connect(SaveSignalAction, SIGNAL(triggered()), pReadData, SLOT(saveSignal()));
+	connect(SaveSignalAction, SIGNAL(triggered()), this, SLOT(saveSignal()));
 
 	SaveTextAction = new QAction(tr("&Save text"), this);
 	SaveTextAction->setStatusTip(tr("saves the current text in the text window to a file. "));
