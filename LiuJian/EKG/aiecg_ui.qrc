@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="/AIECG_UI">
+    <file>AIECG_UI/button_green.png</file>
+    <file>AIECG_UI/button_red.png</file>
+    <file>AIECG_UI/heart1.png</file>
+    <file>AIECG_UI/heart2.png</file>
+  </qresource>
+</RCC>
