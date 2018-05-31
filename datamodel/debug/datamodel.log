@@ -1,0 +1,27 @@
+﻿生成启动时间为 2018/5/31 9:50:37。
+     1>项目“C:\experiment\datamodel\datamodel.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“debug\datamodel.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       CustomBuild:
+         RCC images.qrc
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtCore" /I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\QtGui" /I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include" /I. /I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\include\ActiveQt" /Idebug /I"..\..\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\mkspecs\default" /Zi /nologo /W3 /WX- /Od /D _WINDOWS /D UNICODE /D WIN32 /D QT_DLL /D QT_GUI_LIB /D QT_CORE_LIB /D QT_HAVE_MMX /D QT_HAVE_SSE /D QT_HAVE_MMXEXT /D QT_HAVE_SSE2 /D QT_THREAD_SUPPORT /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t- /Zc:forScope /GR /Fo"debug\\" /Fd".\vc100.pdb" /Gd /TP /errorReport:prompt debug\qrc_images.cpp -Zm200 -w34100 -w34189 
+         qrc_images.cpp
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"debug\\datamodel.exe" /NOLOGO /LIBPATH:"c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib" "c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\qtmaind.lib" "c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtGuid4.lib" "c:\Qt\qt-4.8.7-x64-msvc2010\qt-4.8.7-x64-msvc2010\lib\QtCored4.lib" opencv_ml249d.lib opencv_calib3d249d.lib opencv_contrib249d.lib opencv_core249d.lib opencv_features2d249d.lib opencv_flann249d.lib opencv_gpu249d.lib opencv_highgui249d.lib opencv_imgproc249d.lib opencv_legacy249d.lib opencv_objdetect249d.lib opencv_ts249d.lib opencv_video249d.lib opencv_nonfree249d.lib opencv_ocl249d.lib opencv_photo249d.lib opencv_stitching249d.lib opencv_superres249d.lib opencv_videostab249d.lib opencv_objdetect249.lib opencv_ts249.lib opencv_video249.lib opencv_nonfree249.lib opencv_ocl249.lib opencv_photo249.lib opencv_stitching249.lib opencv_superres249.lib opencv_videostab249.lib opencv_calib3d249.lib opencv_contrib249.lib opencv_core249.lib opencv_features2d249.lib opencv_flann249.lib opencv_gpu249.lib opencv_highgui249.lib opencv_imgproc249.lib opencv_legacy249.lib opencv_ml249.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"debug\datamodel.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\experiment\datamodel\debug\datamodel.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X64 debug\datamodel.obj
+         debug\main.obj
+         debug\moc_datamodel.obj
+         debug\qrc_images.obj "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" 
+         LINK : 没有找到 debug\\datamodel.exe 或上一个增量链接没有生成它；正在执行完全链接
+     1>qtmaind.lib(qtmain_win.obj) : warning LNK4099: 未找到 PDB“vc100.pdb”(使用“qtmaind.lib(qtmain_win.obj)”或在“C:\experiment\datamodel\debug\vc100.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+         datamodel.vcxproj -> C:\experiment\datamodel\debug\datamodel.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"debug\\datamodel.exe;#1" /manifest debug\datamodel.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         正在删除文件“debug\datamodel.unsuccessfulbuild”。
+         正在对“debug\datamodel.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“C:\experiment\datamodel\datamodel.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:06.75
